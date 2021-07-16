@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+    <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
         <h1>Generador de memes</h1>
         <div class="header-menu">
             <button class="button-header"><i></i>Imagen</button>
@@ -16,6 +17,7 @@
             <button class="button-header"><i></i>Modo claro</button>
         </div>
     </header>
+    <!------------------------------------------- AREA DE TRABAJO ------------------------------------------------->
     <div class="meme-editor-container">
         <main>
             <div class="meme-box">
@@ -25,8 +27,57 @@
             </div>
             <button class="download-button"><i></i>Descargá tu meme</button>
         </main>
-        <aside>
-            
+    <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
+        <aside class='side-panel'>
+            <button class="close-button"></button>
+    <!--------------------------------------------- MENU IMAGEN --------------------------------------------------->
+            <section class="img-panel">
+                <h2>IMAGEN</h2>
+                <div class="format-panel"></div>
+                    <h3>URL</h3>
+                    <input type="url" class="url-input">
+                <div class="format-panel">
+    <!-------------------------------------------- OPCIONES FONDO ------------------------------------------------->
+                    <h3>FONDO</h3>
+                    <div class="background-menu">
+                        <div class="input-background">
+                            <input type="color" class="color-background">
+                            <span class="input-background-text"></span>
+                        </div>
+
+                        <div class="input-background">
+                            <select name="background-choices" id="select-background">
+                                <option value="none">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+    <!----------------------------------------- OPCIONES FILTRO -------------------------------------------------->            
+                <div class="format-panel">
+                    <h3>FILTROS</h3>
+                    <div class="filter-menu">
+                        <select name="filter-choices" id="select-filter">
+                            <option value="brightness">BRILLO</option>
+                            <option value="opacity">OPACIDAD</option>
+                            <option value="contrast">CONTRASTE</option>
+                            <option value="blur">DESENFOQUE</option>
+                            <option value="grayscale">ESCALA DE GRISES</option>
+                            <option value="sepia">SEPIA</option>
+                            <option value="hue">HUE</option>
+                            <option value="saturation">SATURADO</option>
+                            <option value="negative">NEGATIVO</option>
+                        </select>
+
+                        <button class="filter-button">Restablecer filtros</button>
+                    </div>
+                </div>
+            </section>
+    
         </aside>
     </div>
     
