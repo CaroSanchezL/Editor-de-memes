@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(73, 73, 73);
+    overflow: hidden;
 }
 
 h1 {
@@ -63,25 +64,27 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 600px;
+    width: 500px;
 }
 
 .meme-box-text {
     background-color: white;
-    padding: 20px;
-    font-size: 50px;
+    padding: 15px;
+    font-size: 40px;
     color: black;
     text-align: center;
 }
 
 .meme-placeholder {
     background-color: black;
-    height: 35vh;
+    height: 30vh;
 }
 
 .contenedor-menu-imagen {
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    left: 89%;
+    bottom: 102vh;
+
 }
 
 .img-panel {
