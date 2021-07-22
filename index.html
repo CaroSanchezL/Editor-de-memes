@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Editor de memes</title>
 </head>
 <body>
     <header>
     <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
-        <h1>Generador de memes</h1>
-        <div class="header-menu">
-            <button class="button-header"><i></i>Imagen</button>
-            <button class="button-header"><i></i>Texto</button>
-            <button class="button-header"><i></i>Modo oscuro</button>
-            <button class="button-header"><i></i>Modo claro</button>
-        </div>
+        <h1>GENERADOR DE MEMES</h1>
+        <nav class="nav-header">
+            <button class="button-header"><i class="fas fa-file-image"></i></i>Imagen</button>
+            <button class="button-header"><i class="fas fa-font"></i>Texto</button>
+            <button class="button-header"><i class="fas fa-lightbulb"></i>Modo oscuro</button><!-- acá pondría solo uno de los dos botones y luego cambiaría el texto cuando apretamos-->
+            <!-- <button class="button-header"><i></i>Modo claro</button> -->
+        </nav>
     </header>
     <!------------------------------------------- AREA DE TRABAJO ------------------------------------------------->
-    <div class="meme-editor-container">
-        <main>
-            <div class="meme-box">
-                <p class="top-text">TOP TEXT</p>
-                <div class="meme-placeholder"></div>
-                <p class="bottom-text">BOTTOM TEXT</p>
-            </div>
-            <button class="download-button"><i></i>Descargá tu meme</button>
-        </main>
+    <main>
+        <div class="meme-editor-container">
+            
+                <div class="meme-box">
+                    <p class="meme-box-text">TOP TEXT</p>
+                    <div class="meme-placeholder"></div>
+                    <p class="meme-box-text">BOTTOM TEXT</p>
+                </div>
+                <button class="download-button"><i></i>Descargá tu meme</button>
+            
+        </div>
+    </main>
     <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
         <aside class='side-panel'>
             <button class="close-button"></button>
-    <!--------------------------------------------- MENU IMAGEN --------------------------------------------------->
+        </aside>
+        
+    <!-------------------------------------------- MENU IMAGEN --------------------------------------------------->
+    <div class="contenedor-menu-imagen">
             <section class="img-panel">
                 <h2>IMAGEN</h2>
                 <div class="format-panel"></div>
@@ -44,7 +52,6 @@
                             <input type="color" class="color-background">
                             <span class="input-background-text"></span>
                         </div>
-
                         <div class="input-background">
                             <select name="background-choices" id="select-background">
                                 <option value="none">Ninguno</option>
@@ -57,26 +64,43 @@
                         </div>
                     </div>
                 </div>
+    
     <!----------------------------------------- OPCIONES FILTRO -------------------------------------------------->            
-                <div class="format-panel">
+                <div class="format-panel"> <!-- el nombre de esta clase? yo le pondría filtros-column o algo así-->
                     <h3>FILTROS</h3>
-                    <div class="filter-menu">
-                        <select name="filter-choices" id="select-filter">
-                            <option value="brightness">BRILLO</option>
-                            <option value="opacity">OPACIDAD</option>
-                            <option value="contrast">CONTRASTE</option>
-                            <option value="blur">DESENFOQUE</option>
-                            <option value="grayscale">ESCALA DE GRISES</option>
-                            <option value="sepia">SEPIA</option>
-                            <option value="hue">HUE</option>
-                            <option value="saturation">SATURADO</option>
-                            <option value="negative">NEGATIVO</option>
-                        </select>
-
+                    
+                        <label>BRILLO
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>OPACIDAD
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>CONTRASTE
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>DESENFOQUE
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>ESCALA DE GRISES
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>SEPIA
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>HUE
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>SATURADO
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
+                        <label>NEGATIVO
+                            <input type="range" min="5" max="10" step="0.01">
+                        </label>
                         <button class="filter-button">Restablecer filtros</button>
                     </div>
                 </div>
             </section>
+        </div>
     
         </aside>
     </div>
