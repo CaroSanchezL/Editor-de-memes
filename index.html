@@ -12,21 +12,26 @@
     <header>
     <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
         <h1>GENERADOR DE MEMES</h1>
-        <nav class="nav-header">
-            <button class="button-header"><i class="fas fa-file-image"></i></i>Imagen</button>
-            <button class="button-header"><i class="fas fa-font"></i>Texto</button>
-            <button class="button-header"><i class="fas fa-lightbulb"></i>Modo oscuro</button><!-- acá pondría solo uno de los dos botones y luego cambiaría el texto cuando apretamos-->
-            <!-- <button class="button-header"><i></i>Modo claro</button> -->
-        </nav>
+        <div class="div-header">
+            <button class="button-header" id="img-button"><i class="fas fa-file-image"></i></i>Imagen</button>
+            <button class="button-header" id="text-button"><i class="fas fa-font"></i>Texto</button>
+            <button class="button-header dark-mode-header" id="dark-mode-button"><i class="fas fa-lightbulb"></i>Modo oscuro</button><!-- acá pondría solo uno de los dos botones y luego cambiaría el texto cuando apretamos-->
+            <button class="button-header" id="light-mode-button"><i class="fas fa-lightbulb"></i>Modo claro</button>
+    <!-- CELI: Volví a poner los botones alternativos que aparezcan y desaparezcan porque si cambio el textContent de un mismo botón, me saca el ícono de adentro -->
+        </div>
     </header>
     <!------------------------------------------- AREA DE TRABAJO ------------------------------------------------->
     <main>
         <div class="meme-editor-container">
             
                 <div class="meme-box">
-                    <p class="meme-box-text">TOP TEXT</p>
+                    <div class="meme-box-text">
+                    <p>TOP TEXT</p>
+                    </div>
                     <div class="meme-placeholder"></div>
+                    <div class="meme-box-text">                        
                     <p class="meme-box-text">BOTTOM TEXT</p>
+                    </div>
                 </div>
                 <button class="download-button"><i class="fas fa-download"></i>Descargá tu meme</button>
             
@@ -104,6 +109,6 @@
     
         </aside>
     </div>
-    
+    <script src="main.js"></script>
 </body>
 </html>
