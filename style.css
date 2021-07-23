@@ -41,7 +41,7 @@ header {
     padding: 15px;
     position: absolute;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 main {
@@ -84,7 +84,19 @@ main {
     position: relative;
     left: 89%;
     bottom: 102vh;
+}
 
+.download-button {
+    background-color: green;
+    color:white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.fa-download {
+    color:white;
 }
 
 .img-panel {
