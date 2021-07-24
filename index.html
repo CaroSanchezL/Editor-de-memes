@@ -38,12 +38,11 @@
         </div>
     </main>
     <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
-        <aside class='side-panel'>
-            <button class="close-button"></button>
-        </aside>
+    <aside class='side-panel'>
+        <button class="close-button"></button>
         
     <!-------------------------------------------- MENU IMAGEN --------------------------------------------------->
-    <div class="contenedor-menu-imagen">
+    <div class="edit-box">
             <section class="img-panel">
                 <h2>IMAGEN</h2>
                 <div class="format-panel"></div>
@@ -70,8 +69,8 @@
                     </div>
                 </div>
     
-    <!----------------------------------------- OPCIONES FILTRO -------------------------------------------------->            
-                <div class="format-panel"> <!-- el nombre de esta clase? yo le pondría filtros-column o algo así-->
+    <!-------------------------------------- OPCIONES FILTRO------------------------------------------->            
+                <div class="filter-panel">
                     <h3>FILTROS</h3>
                     
                         <label>BRILLO
@@ -105,8 +104,67 @@
                     </div>
                 </div>
             </section>
+
+            <section class = "text-panel">
+                <h2>TEXTO</h2>
+                <div class= "top-text-panel">
+                    <h3>SUPERIOR</h3>
+                    <textarea class="top-text-area">TOP TEXT</textarea>
+                    <label for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
+                </div>
+                <div class= "bottom-text-panel">
+                    <h3>INFERIOR</h3>
+                    <textarea class="bottom-text-area">BOTTOM TEXT</textarea>
+                    <label for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
+                </div>
+                <div class="font">
+                    <h3>FUENTE</h3>
+                    <select name="font-choices" id="select-font">
+                        <option value="arial">Arial</option>
+                        <option value="arial-black">Arial Black</option>
+                        <option value="american-typewriter">American Typewriter</option>
+                        <option value="andale-mono">Andale Mono</option>
+                        <option value="comic-sans">Comic Sans MS</option>
+                        <option value="helvetica">Helvetica</option>
+                        <option value="impact">Impact</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="times-new-roman">Times New Roman</option>                        
+                    </select>
+                    <input type="number" name= "font-size" id="font-size-input" value="40" min="12">
+                    <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
+                    <button class="text-align-button" id="text-align-center"><i class="fas fa-align-center"></i></button>
+                    <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>
+                </div>
+                <div class="text-color-background">
+                    <label for="font-color">COLOR<input type="color" name="font-color" id="font-color-input"></label>
+                    <label for="text-background">COLOR<input type="color" name="text-background" id="text-background-input"></label>
+                    <label for="transparent-background"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
+                </div>
+                <div class="text-outline">
+                    <h3>CONTORNO</h3>
+                    <div class="outline-buttons">
+                        <button id="button-no-outline">NINGUNO</button>
+                        <button id="button-light-outline">CLARO</button>
+                        <button id="button-dark-outline">OSCURO</button>
+                    </div>
+                </div>
+                <div class="text-padding">
+                <h3>ESPACIADO</h3>
+                <input type="number" id="padding-input" value="25" min="10" max="50">
+                </div>
+                <div class="line-spacing-input">
+                    <h3>INTERLINEADO</h3>
+                    <select name="padding-input" id="padding-input">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                <div>
+            </section>
         </div>
-    
         </aside>
     </div>
     <script src="main.js"></script>
