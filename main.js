@@ -45,3 +45,20 @@ const switchMode = () => {
 lightModeButton.onclick = switchMode;
 darkModeButton.onclick = switchMode;
 
+
+
+//-------- Funcionalidad Menú Texto---------//
+
+const topTextInput = document.getElementById("top-text-input");
+const topTextInMemebox = document.getElementById("top-text-in-memebox")
+const bottomTextInput = document.getElementById("bottom-text-input");
+const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
+
+topTextInput.oninput = () => { 
+    topTextInMemebox.textContent = topTextInput.value;
+}
+
+bottomTextInput.oninput = () => {
+    bottomTextInMemebox.textContent = bottomTextInput.value;
+}
+
