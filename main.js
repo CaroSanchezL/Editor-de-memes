@@ -1,18 +1,40 @@
 //---------------------------------VARIABLES HTML------------------------------------------//
 
 const body = document.querySelector('body');
+
+// VARIABLES HEADER
 const header = document.querySelector('header');
 const textButton = document.querySelector('#text-button');
 const imgButton = document.querySelector('#img-button');
 const lightModeButton = document.querySelector('#light-mode-button')
 const darkModeButton = document.querySelector('#dark-mode-button')
 const h1 = document.querySelector('h1');
-const imgPanel = document.querySelector('.img-panel') 
-const h2 = document.querySelector('h2');
-const h3 = document.querySelector('h3')
-// const select = document.querySelector('select');
-// const label = document.querySelector('label')
-// const input = document.querySelector('input')
+
+// VARIABLES PANEL IMAGEN
+
+// Variables títulos
+const imgPanel = document.querySelector('.img-panel'); 
+const ImgTitle = document.querySelector('#img-title');
+const urlTitle = document.querySelector('#url-title');
+const filterTitle = document.querySelector('#filter-title');
+const backgroundImgTitle = document.querySelector('#background-img-title');
+
+//Variables inputs
+
+
+// VARIABLES PANEL TEXTO
+
+// Variables títulos
+
+const TextTitle = document.querySelector('#text-title');
+const topTextTitle = document.querySelector('#top-text-title');
+const bottomTextTitle = document.querySelector('#bottom-text-title');
+const fontTitle = document.querySelector('#font-title');
+const textColorTitle = document.querySelector('#text-color-title');
+const textBackgroundTitle = document.querySelector('#text-background-title');
+const textOutlineTitle = document.querySelector('#text-outline-title');
+const paddingTitle = document.querySelector('#padding-title');
+const lineSpacingTitle = document.querySelector('line-spacing-title');
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
@@ -27,10 +49,19 @@ const switchMode = () => {
     textButton.classList.toggle('dark-mode-header');
     imgButton.classList.toggle('dark-mode-header');
     imgPanel.classList.toggle('dark-mode-aside');
-    h2.classList.toggle('dark-mode-aside')
-    // select.classList.toggle('dark-mode-aside');
-    // label.classList.toggle('dark-mode-aside')
-    // input.style.backgroundColor = '#393e49'
+    ImgTitle.classList.toggle('dark-mode-aside');
+    urlTitle.classList.toggle('dark-mode-aside')
+    filterTitle.classList.toggle('dark-mode-aside')
+    backgroundImgTitle.classList.toggle('dark-mode-aside')
+    TextTitle.classList.toggle('dark-mode-aside')
+    topTextTitle.classList.toggle('dark-mode-aside')
+    bottomTextTitle.classList.toggle('dark-mode-aside')
+    fontTitle.classList.toggle('dark-mode-aside')
+    textColorTitle.classList.toggle('dark-mode-aside')
+    textBackgroundTitle.classList.toggle('dark-mode-aside')
+    textOutlineTitle.classList.toggle('dark-mode-aside')
+    paddingTitle.classList.toggle('dark-mode-aside')
+    lineSpacingTitle.classList.toggle('dark-mode-aside')
 
     if (darkModeButton.style.display === 'none') {
         lightModeButton.style.display = 'none';
