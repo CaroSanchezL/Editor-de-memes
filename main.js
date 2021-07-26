@@ -27,6 +27,7 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 // VARIABLES PANEL TEXTO
 
 const textPanel = document.querySelector('.text-panel');
+
 // Variables títulos
 
 const TextTitle = document.querySelector('#text-title');
@@ -115,6 +116,20 @@ fontSizeInput.oninput = () => {
     bottomTextInMemebox.style.fontSize = fontSizeInput.value + "px";
 }
 
+//-------------------------------------FUNCIONALIDAD TOGGLE TEXTO/IMAGEN--------------------------------------//
+
+
+
+textButton.onclick = () => {
+    
+        imgPanel.style.display = "none";
+        textPanel.style.display = "flex";
+}
+
+imgButton.onclick = () => {
+        textPanel.style.display = "none";
+        imgPanel.style.display = "flex";
+}
 
 
 
