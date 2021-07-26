@@ -61,6 +61,7 @@ const textColorInput = document.getElementById("font-color-input");
 const textBackgroundInput = document.getElementById("text-background-input");
 const textBackgroundTransparent = document.getElementById("transparent-background-checkbox");
 
+
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
 lightModeButton.style.display = 'none';
@@ -156,10 +157,10 @@ textBackgroundTransparent.onclick = () => {
 }
 
 
-
 // no tengo la menor idea qué es el contorno//
 
 paddingInput.oninput = () => {
-    paddingValueTextMemebox.padding = paddingInput.value;
+    topTextInMemebox.style.padding = paddingInput.value + "px";
+    bottomTextInMemebox.style.padding = paddingInput.value + "px";
 }
 
