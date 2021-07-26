@@ -12,12 +12,11 @@
     <header>
     <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
         <h1>GENERADOR DE MEMES</h1>
-        <div class="div-header">
+        <div class="buttons-container-header">
             <button class="button-header" id="img-button"><i class="fas fa-file-image"></i></i>Imagen</button>
             <button class="button-header" id="text-button"><i class="fas fa-font"></i>Texto</button>
-            <button class="button-header dark-mode-header" id="dark-mode-button"><i class="fas fa-lightbulb"></i>Modo oscuro</button><!-- acá pondría solo uno de los dos botones y luego cambiaría el texto cuando apretamos-->
+            <button class="button-header dark-mode-header" id="dark-mode-button"><i class="fas fa-lightbulb"></i>Modo oscuro</button>
             <button class="button-header" id="light-mode-button"><i class="fas fa-lightbulb"></i>Modo claro</button>
-    <!-- CELI: Volví a poner los botones alternativos que aparezcan y desaparezcan porque si cambio el textContent de un mismo botón, me saca el ícono de adentro -->
         </div>
     </header>
     <!------------------------------------------- AREA DE TRABAJO ------------------------------------------------->
@@ -40,9 +39,11 @@
     <aside class='side-panel'>
         
     <!-------------------------------------------- MENU IMAGEN --------------------------------------------------->
+
     <div class="edit-box">
             <section class="img-panel panel">
                 <h2 id="img-title">IMAGEN</h2>
+
                 <div class="format-panel"></div>
                     <h3 id="url-title">URL</h3>
                     <input type="url" id="url-input">
@@ -118,15 +119,15 @@
                 <div class="font">
                     <h3 id="font-title">FUENTE</h3>
                     <select name="font-choices" id="select-font">
-                        <option value="arial">Arial</option>
-                        <option value="arial-black">Arial Black</option>
-                        <option value="american-typewriter">American Typewriter</option>
-                        <option value="andale-mono">Andale Mono</option>
-                        <option value="comic-sans">Comic Sans MS</option>
-                        <option value="helvetica">Helvetica</option>
-                        <option value="impact">Impact</option>
-                        <option value="verdana">Verdana</option>
-                        <option value="times-new-roman">Times New Roman</option>                        
+                        <option value="Arial, Helvetica, sans-serif">Arial</option>
+                        <option value="'Anton', sans-serif">Anton</option>
+                        <option value="'Zen Tokyo Zoo', cursive">Zen Tokyo Zoo</option>
+                        <option value="'Indie Flower', cursive">Indie Flower</option>
+                        <option value="'Courier New', Courier, monospace">Courier New</option>
+                        <option value="'Verdana', 'Geneva', 'Tahoma', sans-serif">Verdana</option>
+                        <option value="'Otomanopee One', sans-serif">Otomanopee One</option>
+                        <option value="'Special Elite', cursive">Special Elite</option>
+                        <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
                     </select>
                     <input type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100">
                     <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
@@ -166,7 +167,6 @@
             </section>
         </div>
         </aside>
-    </div>
     <script src="main.js"></script>
 </body>
 </html>
