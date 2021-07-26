@@ -168,5 +168,9 @@ paddingInput.oninput = () => {
 textButton.onclick = () => {
     asidePanel.style.top = "inherit";
     asidePanel.style.bottom = "0";
-    
+}
+
+imgButton.onclick = () => {
+    asidePanel.style.bottom = "inherit";
+    asidePanel.style.top = "0";
 }
