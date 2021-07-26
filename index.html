@@ -38,22 +38,22 @@
     </main>
     <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
     <aside class='side-panel'>
-        <button class="close-button"></button>
         
     <!-------------------------------------------- MENU IMAGEN --------------------------------------------------->
     <div class="edit-box">
-            <section class="img-panel">
-                <h2>IMAGEN</h2>
+            <section class="img-panel panel">
+                <h2 id="img-title">IMAGEN</h2>
                 <div class="format-panel"></div>
-                    <h3>URL</h3>
-                    <input type="url" class="url-input">
+                    <h3 id="url-title">URL</h3>
+                    <input type="url" id="url-input">
                 <div class="format-panel">
     <!-------------------------------------------- OPCIONES FONDO ------------------------------------------------->
-                    <h3>FONDO</h3>
+                    <h3 id="background-img-title">FONDO</h3>
                     <div class="background-menu">
                         <div class="input-background">
-                            <input type="color" class="color-background">
-                            <span class="input-background-text"></span>
+                            <input type="color" id="color-background">
+                            <span id="input-background-text"></span>  
+                            <!-- En este span va el texto que dice que color es -->
                         </div>
                         <div class="input-background">
                             <select name="background-choices" id="select-background">
@@ -70,8 +70,7 @@
     
     <!-------------------------------------- OPCIONES FILTRO------------------------------------------->            
                 <div class="filter-panel">
-                    <h3>FILTROS</h3>
-                    
+                    <h3 id="filter-title">FILTROS</h3>
                         <label>BRILLO
                             <input type="range" min="5" max="10" step="0.01">
                         </label>
@@ -104,20 +103,20 @@
                 </div>
             </section>
 
-            <section class = "text-panel">
-                <h2>TEXTO</h2>
+            <section class = "text-panel panel">
+                <h2 id="text-title">TEXTO</h2>
                 <div class= "top-text-panel">
-                    <h3>SUPERIOR</h3>
+                    <h3 id="top-text-title">SUPERIOR</h3>
                     <textarea id="top-text-input">TOP TEXT</textarea>
                     <label for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
                 </div>
                 <div class= "bottom-text-panel">
-                    <h3>INFERIOR</h3>
+                    <h3 id="bottom-text-title">INFERIOR</h3>
                     <textarea id="bottom-text-input">BOTTOM TEXT</textarea>
                     <label for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
                 </div>
                 <div class="font">
-                    <h3>FUENTE</h3>
+                    <h3 id="font-title">FUENTE</h3>
                     <select name="font-choices" id="select-font">
                         <option value="arial">Arial</option>
                         <option value="arial-black">Arial Black</option>
@@ -135,12 +134,14 @@
                     <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>
                 </div>
                 <div class="text-color-background">
-                    <label for="font-color">COLOR<input type="color" name="font-color" id="font-color-input"></label>
-                    <label for="text-background">COLOR<input type="color" name="text-background" id="text-background-input"></label>
+                    <h3 id="text-color-title">COLOR</h3>
+                    <input type="color" name="font-color" id="font-color-input">
+                    <h3 id="text-background-title">FONDO</h3>
+                    <input type="color" name="text-background" id="text-background-input" value="#ffffff">
                     <label for="transparent-background"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
                 </div>
                 <div class="text-outline">
-                    <h3>CONTORNO</h3>
+                    <h3 id="text-outline-title">CONTORNO</h3>
                     <div class="outline-buttons">
                         <button id="button-no-outline">NINGUNO</button>
                         <button id="button-light-outline">CLARO</button>
@@ -148,11 +149,11 @@
                     </div>
                 </div>
                 <div class="text-padding">
-                <h3>ESPACIADO</h3>
+                <h3 id="padding-title">ESPACIADO</h3>
                 <input type="number" id="padding-input" value="25" min="10" max="50">
                 </div>
                 <div class="line-spacing-input">
-                    <h3>INTERLINEADO</h3>
+                    <h3 id="line-spacing-title">INTERLINEADO</h3>
                     <select name="padding-input" id="padding-input">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
