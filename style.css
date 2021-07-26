@@ -96,10 +96,6 @@ main {
     text-align: center;
 }
 
-/* .meme-placeholder {
-    background-color: black;
-    height: 30vh;
-} */
 
 aside {
     background-color: #252935;
@@ -190,6 +186,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 15px;
     width: 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 

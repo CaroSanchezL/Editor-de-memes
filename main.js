@@ -56,9 +56,9 @@ const textAlignLeft = document.getElementById("text-align-left");
 const textAlignCenter = document.getElementById("text-align-center");
 const textAlignRight = document.getElementById("text-align-right");
 const paddingInput = document.getElementById("padding-input");
-const paddingValueTextMemebox = document.querySelector(".meme-box-text");
-const selectFont = document.getElementById("select-font")
-
+const selectFont = document.getElementById("select-font");
+const textColorInput = document.getElementById("font-color-input");
+const textBackgroundInput = document.getElementById("text-background-input");
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
@@ -134,8 +134,24 @@ textAlignRight.onclick = () => {
     topTextInMemebox.style.textAlign = "right";
     bottomTextInMemebox.style.textAlign = "right";
 }
+
+textColorInput.oninput = () => {
+    topTextInMemebox.style.color = textColorInput.value;
+    bottomTextInMemebox.style.color = textColorInput.value;
+}
+
+textBackgroundInput.oninput = () => {
+    containerTopText.style.backgroundColor = textBackgroundInput.value;
+    topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+    containerBottomText.style.backgroundColor = textBackgroundInput.value;
+    bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+}
+
+
+
 // no tengo la menor idea qué es el contorno//
 
 paddingInput.oninput = () => {
     paddingValueTextMemebox.padding = paddingInput.value;
 }
+
