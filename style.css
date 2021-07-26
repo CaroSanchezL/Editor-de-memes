@@ -31,14 +31,18 @@ i {
 
 body {
     background-color: rgb(243, 243, 243);
-    /* overflow: hidden; */
+    display: flex;
+
+}
+
+button {
+    cursor: pointer;
 }
 
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: lightgrey;
     padding: 15px;
@@ -52,6 +56,17 @@ main {
     justify-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.buttons-container-header {
+    display: flex;
+}
+
+.button-header {
+    border: none;
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 0 10px;
 }
 
 .meme-editor-container{
@@ -68,8 +83,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 500px;
-    background-color: black;
     height: 500px;
+    background-color: black;
+   
 }
 
 .meme-box-text {
@@ -80,10 +96,6 @@ main {
     text-align: center;
 }
 
-/* .meme-placeholder {
-    background-color: black;
-    height: 30vh;
-} */
 
 .contenedor-menu-imagen {
     position: relative;
@@ -104,21 +116,21 @@ main {
     color:white;
 }
 
-.img-panel {
+aside {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.img-panel, .text-panel {
     max-width: 200px;
     background-color: white;
     padding: 20px;
-    height: 100vh;
 }
 
 
-.button-header {
-    border: none;
-    background-color: lightgrey;
-    padding: 5px;
-}
 
 #dark-mode-button {
     display: none;
@@ -144,6 +156,20 @@ input[type="range"] {
     background-color: #5f5f5f;
     appearance: none;
 }
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: rgb(44, 44, 44);
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    cursor: pointer;
+
+
+
+
+
+
 
 /*----------------------MODO OSCURO (esto tiene que quedar siempre abajo para que le gane a las otras clases)------------------------*/
 
