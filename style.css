@@ -12,8 +12,6 @@
 
 body {
     background-color: #393e49;
-    display: flex;
-    justify-content: flex-end;
 }
 
 h1 {
@@ -72,11 +70,8 @@ main {
 
 .meme-editor-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100vh;
-    flex-grow: 1;
+    justify-content: center;
 }
 
 .meme-box {
@@ -103,6 +98,9 @@ aside {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
     z-index: 2;
 }
 
@@ -278,3 +276,5 @@ body.light-mode input[type="range"]:hover {
 body.light-mode input[type="color"]:hover {
     background-color: #e0e0e0
 }
+
+

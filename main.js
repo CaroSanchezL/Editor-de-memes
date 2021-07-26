@@ -59,6 +59,7 @@ const paddingInput = document.getElementById("padding-input");
 const selectFont = document.getElementById("select-font");
 const textColorInput = document.getElementById("font-color-input");
 const textBackgroundInput = document.getElementById("text-background-input");
+const textBackgroundTransparent = document.getElementById("transparent-background-checkbox");
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
@@ -145,6 +146,13 @@ textBackgroundInput.oninput = () => {
     topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
     containerBottomText.style.backgroundColor = textBackgroundInput.value;
     bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+}
+
+textBackgroundTransparent.onclick = () => {
+    containerTopText.style.backgroundColor = "";
+    topTextInMemebox.style.backgroundColor = "transparent";
+    containerBottomText.style.backgroundColor = "none";
+    bottomTextInMemebox.style.backgroundColor = "none";
 }
 
 
