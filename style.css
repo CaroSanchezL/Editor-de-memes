@@ -107,6 +107,7 @@ aside {
     align-items: flex-end;
     justify-content: flex-end;
     z-index: 2;
+    overflow: auto;
 }
 
 aside button {
@@ -135,7 +136,7 @@ aside button {
 
 .img-panel, .text-panel {
     max-width: 200px;
-    background-color: #191e2b
+    background-color: #191e2b;
 }
 
 .panel {
@@ -143,7 +144,11 @@ aside button {
     flex-direction: column;
     max-width: 200px;
     padding: 20px;
-    height: 100vh;
+    height: 100%;
+}
+
+.text-panel {
+    display: none;
 }
 
 .button-header {

@@ -134,8 +134,20 @@ textAlignRight.onclick = () => {
     topTextInMemebox.style.textAlign = "right";
     bottomTextInMemebox.style.textAlign = "right";
 }
-// no tengo la menor idea qué es el contorno//
 
 paddingInput.oninput = () => {
     paddingValueTextMemebox.padding = paddingInput.value;
+}
+
+//-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
+
+textButton.onclick = () => {
+    
+        imgPanel.style.display = "none";
+        textPanel.style.display = "flex";
+}
+
+imgButton.onclick = () => {
+        textPanel.style.display = "none";
+        imgPanel.style.display = "flex";
 }
