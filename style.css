@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Indie+Flower&family=Otomanopee+One&family=Special+Elite&family=Zen+Tokyo+Zoo&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -29,15 +33,22 @@ i {
     margin-right: 5px;
 }
 
+
+body {
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: flex-end;
+}
+
 button {
+    cursor: pointer;
     border:none;
-    padding: 5px
+    padding: 5px;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: #191e2b;
     padding: 15px;
@@ -51,6 +62,17 @@ main {
     justify-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.buttons-container-header {
+    display: flex;
+}
+
+.button-header {
+    border: none;
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 0 10px;
 }
 
 .meme-editor-container{
@@ -67,8 +89,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 500px;
-    background-color: black;
     height: 500px;
+    background-color: black;
 }
 
 .meme-box-text {
@@ -79,13 +101,15 @@ main {
     text-align: center;
 }
 
-/* .meme-placeholder {
-    background-color: black;
-    height: 30vh;
-} */
+
 
 aside {
     background-color: #252935;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 2;
 }
 
 aside button {
@@ -112,20 +136,26 @@ aside button {
     color:white;
 }
 
+.img-panel, .text-panel {
+    max-width: 200px;
+    background-color: white;
+}
+  
 .panel {
     display: flex;
     flex-direction: column;
     max-width: 250px;
-    background-color: #191e2b; ;
+    background-color: #191e2b; 
     padding: 20px;
-    height: 100vh;
 }
+
 
 .button-header {
     border: none;
     background-color: #191e2b;
     padding: 5px;
 }
+
 
 #dark-mode-button {
     background-color: #191e2b;
@@ -158,13 +188,20 @@ input[type="range"] {
     appearance: none;
 }
 
+
+
+
+/*----------------------MODO OSCURO (esto tiene que quedar siempre abajo para que le gane a las otras clases)------------------------*/
+
 input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     background-color: #e0e0e0;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
+    cursor: pointer;
 }
+
 
 
 input[type="checkbox"] {
