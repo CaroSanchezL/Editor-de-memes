@@ -27,7 +27,6 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 // VARIABLES PANEL TEXTO
 
 const textPanel = document.querySelector('.text-panel');
-
 // Variables títulos
 
 const TextTitle = document.querySelector('#text-title');
@@ -39,6 +38,7 @@ const textBackgroundTitle = document.querySelector('#text-background-title');
 const textOutlineTitle = document.querySelector('#text-outline-title');
 const paddingTitle = document.querySelector('#padding-title');
 const lineSpacingTitle = document.querySelector('#line-spacing-title');
+
 
 // Variables input
 
@@ -52,6 +52,12 @@ const containerTopText = document.getElementById("container-top-text");
 const containerBottomText = document.getElementById("container-bottom-text")
 const hideBottomText = document.getElementById("hide-bottom-text");
 const fontSizeInput = document.getElementById("font-size-input");
+const textAlignLeft = document.getElementById("text-align-left");
+const textAlignCenter = document.getElementById("text-align-center");
+const textAlignRight = document.getElementById("text-align-right");
+const paddingInput = document.getElementById("padding-input");
+const paddingValueTextMemebox = document.querySelector(".meme-box-text");
+const selectFont = document.getElementById("select-font")
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
@@ -80,7 +86,6 @@ darkModeButton.onclick = switchMode;
 topTextInput.oninput = () => { 
     topTextInMemebox.textContent = topTextInput.value;
 }
-
 bottomTextInput.oninput = () => {
     bottomTextInMemebox.textContent = bottomTextInput.value;
 }
@@ -89,7 +94,6 @@ hideTopText.onclick = () => {
     if (containerTopText.style.display === "none") {
     containerTopText.style.display = "block";
     memeBox.style.justifyContent = "space-between";
-
     }
     else {
         memeBox.style.justifyContent = "flex-end";
@@ -102,23 +106,41 @@ hideBottomText.onclick = () => {
         containerBottomText.style.display = "block";
         memeBox.style.justifyContent = "space-between"
     }
-
     else {
         memeBox.style.justifyContent = "flex-start";
         containerBottomText.style.display = "none";
     }
 }
 
-// acá falta lo del tipo de fuente pero es domingo quiero hacer cosas no tan difíciles//
+selectFont.oninput = () => {
+    topTextInMemebox.style.fontFamily = selectFont.value;
+    bottomTextInMemebox.style.fontFamily = selectFont.value;
+}
 
 fontSizeInput.oninput = () => {
     topTextInMemebox.style.fontSize = fontSizeInput.value + "px";
     bottomTextInMemebox.style.fontSize = fontSizeInput.value + "px";
 }
 
-//-------------------------------------FUNCIONALIDAD TOGGLE TEXTO/IMAGEN--------------------------------------//
+textAlignLeft.onclick = () => {
+    topTextInMemebox.style.textAlign = "left";
+    bottomTextInMemebox.style.textAlign = "left";
+}
+textAlignCenter.onclick = () => {
+    topTextInMemebox.style.textAlign = "center";
+    bottomTextInMemebox.style.textAlign = "center";
+}
+textAlignRight.onclick = () => {
+    topTextInMemebox.style.textAlign = "right";
+    bottomTextInMemebox.style.textAlign = "right";
+}
+// no tengo la menor idea qué es el contorno//
 
+paddingInput.oninput = () => {
+    paddingValueTextMemebox.padding = paddingInput.value;
+}
 
+//-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
 textButton.onclick = () => {
     
