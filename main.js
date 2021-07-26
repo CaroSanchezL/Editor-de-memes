@@ -1,36 +1,65 @@
 //---------------------------------VARIABLES HTML------------------------------------------//
 
 const body = document.querySelector('body');
+
+// VARIABLES HEADER
 const header = document.querySelector('header');
 const textButton = document.querySelector('#text-button');
 const imgButton = document.querySelector('#img-button');
 const lightModeButton = document.querySelector('#light-mode-button')
 const darkModeButton = document.querySelector('#dark-mode-button')
 const h1 = document.querySelector('h1');
-const imgPanel = document.querySelector('.img-panel') 
-const h2 = document.querySelector('h2');
-const h3 = document.querySelector('h3')
-// const select = document.querySelector('select');
-// const label = document.querySelector('label')
-// const input = document.querySelector('input')
+
+// VARIABLES PANEL IMAGEN
+const imgPanel = document.querySelector('.img-panel'); 
+
+// Variables títulos
+
+const ImgTitle = document.querySelector('#img-title');
+const urlTitle = document.querySelector('#url-title');
+const filterTitle = document.querySelector('#filter-title');
+const backgroundImgTitle = document.querySelector('#background-img-title');
+
+//Variables inputs
+
+
+
+// VARIABLES PANEL TEXTO
+
+const textPanel = document.querySelector('.text-panel');
+// Variables títulos
+
+const TextTitle = document.querySelector('#text-title');
+const topTextTitle = document.querySelector('#top-text-title');
+const bottomTextTitle = document.querySelector('#bottom-text-title');
+const fontTitle = document.querySelector('#font-title');
+const textColorTitle = document.querySelector('#text-color-title');
+const textBackgroundTitle = document.querySelector('#text-background-title');
+const textOutlineTitle = document.querySelector('#text-outline-title');
+const paddingTitle = document.querySelector('#padding-title');
+const lineSpacingTitle = document.querySelector('#line-spacing-title');
+
+// Variables input
+
+const topTextInput = document.getElementById("top-text-input");
+const topTextInMemebox = document.getElementById("top-text-in-memebox")
+const bottomTextInput = document.getElementById("bottom-text-input");
+const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
+const memeBox = document.getElementById("meme-box")
+const hideTopText = document.getElementById("hide-top-text");
+const containerTopText = document.getElementById("container-top-text");
+const containerBottomText = document.getElementById("container-bottom-text")
+const hideBottomText = document.getElementById("hide-bottom-text");
+const fontSizeInput = document.getElementById("font-size-input");
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
-lightModeButton.style.display = 'block';
-darkModeButton.style.display = 'none';
+lightModeButton.style.display = 'none';
+darkModeButton.style.display = 'block';
 
 const switchMode = () => {
-    body.classList.toggle('dark-mode-workspace');
-    header.classList.toggle('dark-mode-header')
-    h1.classList.toggle('dark-mode-header');
-    textButton.classList.toggle('dark-mode-header');
-    imgButton.classList.toggle('dark-mode-header');
-    imgPanel.classList.toggle('dark-mode-aside');
-    h2.classList.toggle('dark-mode-aside')
-    // select.classList.toggle('dark-mode-aside');
-    // label.classList.toggle('dark-mode-aside')
-    // input.style.backgroundColor = '#393e49'
+    body.classList.toggle('light-mode')
 
     if (darkModeButton.style.display === 'none') {
         lightModeButton.style.display = 'none';
@@ -38,7 +67,6 @@ const switchMode = () => {
     } else {
         lightModeButton.style.display = 'block';
         darkModeButton.style.display = 'none';
-        
     }
 }
 
@@ -46,8 +74,8 @@ lightModeButton.onclick = switchMode;
 darkModeButton.onclick = switchMode;
 
 
-
 //-------- Funcionalidad Menú Texto---------//
+
 
 
 
@@ -55,6 +83,7 @@ const topTextInput = document.getElementById("top-text-input");
 const topTextInMemebox = document.getElementById("top-text-in-memebox")
 const bottomTextInput = document.getElementById("bottom-text-input");
 const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
+
 
 topTextInput.oninput = () => { 
     topTextInMemebox.textContent = topTextInput.value;
@@ -105,6 +134,7 @@ selectFont.oninput = () => {
 
 
 
+
 const fontSizeInput = document.getElementById("font-size-input");
 
 
@@ -112,6 +142,7 @@ fontSizeInput.oninput = () => {
     topTextInMemebox.style.fontSize = fontSizeInput.value + "px";
     bottomTextInMemebox.style.fontSize = fontSizeInput.value + "px";
 }
+
 
 const textAlignLeft = document.getElementById("text-align-left");
 const textAlignCenter = document.getElementById("text-align-center");
@@ -143,3 +174,9 @@ const paddingValueTextMemebox = document.querySelector(".meme-box-text");
 paddingInput.oninput = () => {
     paddingValueTextMemebox.padding = paddingInput.value;
 }
+
+
+
+
+
+
