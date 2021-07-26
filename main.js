@@ -84,11 +84,6 @@ bottomTextInput.oninput = () => {
     bottomTextInMemebox.textContent = bottomTextInput.value;
 }
 
-const memeBox = document.getElementById("meme-box")
-const hideTopText = document.getElementById("hide-top-text");
-const containerTopText = document.getElementById("container-top-text");
-const containerBottomText = document.getElementById("container-bottom-text")
-
 hideTopText.onclick = () => {
     if (containerTopText.style.display === "none") {
     containerTopText.style.display = "block";
@@ -100,8 +95,6 @@ hideTopText.onclick = () => {
         containerTopText.style.display = "none";
     } 
 }
-
-const hideBottomText = document.getElementById("hide-bottom-text");
 
 hideBottomText.onclick = () => {
     if (containerBottomText.style.display === "none") {
@@ -116,8 +109,6 @@ hideBottomText.onclick = () => {
 }
 
 // acá falta lo del tipo de fuente pero es domingo quiero hacer cosas no tan difíciles//
-
-const fontSizeInput = document.getElementById("font-size-input");
 
 
 fontSizeInput.oninput = () => {
