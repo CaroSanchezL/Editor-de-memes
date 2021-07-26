@@ -41,7 +41,7 @@ const lineSpacingTitle = document.querySelector('#line-spacing-title');
 
 
 // Variables input
-
+const asidePanel = document.getElementById("aside-panel");
 const topTextInput = document.getElementById("top-text-input");
 const topTextInMemebox = document.getElementById("top-text-in-memebox")
 const bottomTextInput = document.getElementById("bottom-text-input");
@@ -164,3 +164,9 @@ paddingInput.oninput = () => {
     bottomTextInMemebox.style.padding = paddingInput.value + "px";
 }
 
+
+textButton.onclick = () => {
+    asidePanel.style.top = "inherit";
+    asidePanel.style.bottom = "0";
+    
+}
