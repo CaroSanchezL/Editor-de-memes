@@ -76,15 +76,6 @@ darkModeButton.onclick = switchMode;
 
 //-------- Funcionalidad Menú Texto---------//
 
-
-
-
-const topTextInput = document.getElementById("top-text-input");
-const topTextInMemebox = document.getElementById("top-text-in-memebox")
-const bottomTextInput = document.getElementById("bottom-text-input");
-const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
-
-
 topTextInput.oninput = () => { 
     topTextInMemebox.textContent = topTextInput.value;
 }
@@ -117,55 +108,12 @@ hideBottomText.onclick = () => {
     }
 }
 
-
-const selectFont = document.getElementById("select-font");
-
-selectFont.oninput = () => {
-    topTextInMemebox.style.fontFamily = selectFont.value;
-    bottomTextInMemebox.style.fontFamily = selectFont.value;
-}
-
-
-
-
+// acá falta lo del tipo de fuente pero es domingo quiero hacer cosas no tan difíciles//
 
 fontSizeInput.oninput = () => {
     topTextInMemebox.style.fontSize = fontSizeInput.value + "px";
     bottomTextInMemebox.style.fontSize = fontSizeInput.value + "px";
 }
-
-
-const textAlignLeft = document.getElementById("text-align-left");
-const textAlignCenter = document.getElementById("text-align-center");
-const textAlignRight = document.getElementById("text-align-right");
-
-
-textAlignLeft.onclick = () => {
-    topTextInMemebox.style.textAlign = "left";
-    bottomTextInMemebox.style.textAlign = "left";
-}
-
-textAlignCenter.onclick = () => {
-    topTextInMemebox.style.textAlign = "center";
-    bottomTextInMemebox.style.textAlign = "center";
-}
-
-textAlignRight.onclick = () => {
-    topTextInMemebox.style.textAlign = "right";
-    bottomTextInMemebox.style.textAlign = "right";
-}
-
-
-// no tengo la menor idea qué es el contorno//
-
-const paddingInput = document.getElementById("padding-input");
-const paddingValueTextMemebox = document.querySelector(".meme-box-text");
-
-
-paddingInput.oninput = () => {
-    paddingValueTextMemebox.padding = paddingInput.value;
-}
-
 
 
 
