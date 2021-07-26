@@ -24,13 +24,12 @@
     <main>
         <div class="meme-editor-container">
             
-                <div class="meme-box">
-                    <div class="meme-box-text">
-                    <p  class="meme-box-text" id="top-text-in-memebox">TOP TEXT</p>
+                <div class="meme-box" id= "meme-box">
+                    <div class="meme-box-text" id="container-top-text">
+                        <p  class="meme-box-text" id="top-text-in-memebox">TOP TEXT</p>
                     </div>
-                    <div class="meme-placeholder"></div>
-                    <div class="meme-box-text">                        
-                    <p class="meme-box-text" id= "bottom-text-in-memebox">BOTTOM TEXT</p>
+                    <div class="meme-box-text" id="container-bottom-text">                        
+                        <p class="meme-box-text" id= "bottom-text-in-memebox">BOTTOM TEXT</p>
                     </div>
                 </div>
                 <button class="download-button"><i class="fas fa-download"></i>Descargá tu meme</button>
@@ -129,7 +128,7 @@
                         <option value="verdana">Verdana</option>
                         <option value="times-new-roman">Times New Roman</option>                        
                     </select>
-                    <input type="number" name= "font-size" id="font-size-input" value="40" min="12">
+                    <input type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100">
                     <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
                     <button class="text-align-button" id="text-align-center"><i class="fas fa-align-center"></i></button>
                     <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>

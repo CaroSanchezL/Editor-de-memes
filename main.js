@@ -84,3 +84,48 @@ bottomTextInput.oninput = () => {
     bottomTextInMemebox.textContent = bottomTextInput.value;
 }
 
+const memeBox = document.getElementById("meme-box")
+const hideTopText = document.getElementById("hide-top-text");
+const containerTopText = document.getElementById("container-top-text");
+const containerBottomText = document.getElementById("container-bottom-text")
+
+hideTopText.onclick = () => {
+    if (containerTopText.style.display === "none") {
+    containerTopText.style.display = "block";
+    memeBox.style.justifyContent = "space-between";
+
+    }
+    else {
+        memeBox.style.justifyContent = "flex-end";
+        containerTopText.style.display = "none";
+    } 
+}
+
+const hideBottomText = document.getElementById("hide-bottom-text");
+
+hideBottomText.onclick = () => {
+    if (containerBottomText.style.display === "none") {
+        containerBottomText.style.display = "block";
+        memeBox.style.justifyContent = "space-between"
+    }
+
+    else {
+        memeBox.style.justifyContent = "flex-start";
+        containerBottomText.style.display = "none";
+    }
+}
+
+// acá falta lo del tipo de fuente pero es domingo quiero hacer cosas no tan difíciles//
+
+const fontSizeInput = document.getElementById("font-size-input");
+
+
+fontSizeInput.oninput = () => {
+    topTextInMemebox.style.fontSize = fontSizeInput.value + "px";
+    bottomTextInMemebox.style.fontSize = fontSizeInput.value + "px";
+}
+
+
+
+
+

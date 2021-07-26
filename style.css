@@ -67,6 +67,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 500px;
+    background-color: black;
+    height: 500px;
 }
 
 .meme-box-text {
@@ -77,10 +79,10 @@ main {
     text-align: center;
 }
 
-.meme-placeholder {
+/* .meme-placeholder {
     background-color: black;
     height: 30vh;
-}
+} */
 
 aside {
     background-color: #252935;
