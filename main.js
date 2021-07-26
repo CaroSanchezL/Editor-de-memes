@@ -149,10 +149,10 @@ textBackgroundInput.oninput = () => {
 }
 
 textBackgroundTransparent.onclick = () => {
-    containerTopText.style.backgroundColor = "";
-    topTextInMemebox.style.backgroundColor = "transparent";
-    containerBottomText.style.backgroundColor = "none";
-    bottomTextInMemebox.style.backgroundColor = "none";
+    containerTopText.style.backgroundColor = "inherit";
+    topTextInMemebox.style.backgroundColor = "inherit";
+    containerBottomText.style.backgroundColor = "inherit";
+    bottomTextInMemebox.style.backgroundColor = "inherit";
 }
 
 
