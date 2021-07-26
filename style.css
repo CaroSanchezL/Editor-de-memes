@@ -12,7 +12,8 @@
 
 body {
     background-color: #393e49;
-    /* overflow: hidden; */
+    display: flex;
+    justify-content: flex-end;
 }
 
 h1 {
@@ -33,22 +34,15 @@ i {
     margin-right: 5px;
 }
 
-
-body {
-    background-color: rgb(243, 243, 243);
-    display: flex;
-    justify-content: flex-end;
-}
-
 button {
-    cursor: pointer;
     border:none;
-    padding: 5px;
+    padding: 5px
 }
 
 header {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #191e2b;
     padding: 15px;
@@ -89,8 +83,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 500px;
-    height: 500px;
     background-color: black;
+    height: 500px;
 }
 
 .meme-box-text {
@@ -101,7 +95,10 @@ main {
     text-align: center;
 }
 
-
+/* .meme-placeholder {
+    background-color: black;
+    height: 30vh;
+} */
 
 aside {
     background-color: #252935;
@@ -138,24 +135,22 @@ aside button {
 
 .img-panel, .text-panel {
     max-width: 200px;
-    background-color: white;
+    background-color: #191e2b
 }
-  
+
 .panel {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
-    background-color: #191e2b; 
+    max-width: 200px;
     padding: 20px;
+    height: 100vh;
 }
-
 
 .button-header {
     border: none;
     background-color: #191e2b;
     padding: 5px;
 }
-
 
 #dark-mode-button {
     background-color: #191e2b;
@@ -188,20 +183,13 @@ input[type="range"] {
     appearance: none;
 }
 
-
-
-
-/*----------------------MODO OSCURO (esto tiene que quedar siempre abajo para que le gane a las otras clases)------------------------*/
-
 input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     background-color: #e0e0e0;
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
-    cursor: pointer;
 }
-
 
 
 input[type="checkbox"] {
