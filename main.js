@@ -61,6 +61,8 @@ const selectFont = document.getElementById("select-font");
 const textColorInput = document.getElementById("font-color-input");
 const textBackgroundInput = document.getElementById("text-background-input");
 const textBackgroundTransparent = document.getElementById("transparent-background-checkbox");
+const spaceLineInput = document.getElementById("spaceline-input")
+
 
 //-----------------------------------VARIABLES MAIN------------------------------------------------//
 
@@ -169,6 +171,14 @@ paddingInput.oninput = () => {
     bottomTextInMemebox.style.padding = paddingInput.value + "px";
 }
 
+spaceLineInput.oninput = () => {
+    topTextInMemebox.style.lineHeight = spaceLineInput.value;
+    bottomTextInMemebox.style.lineHeight = spaceLineInput.value;
+    
+
+}
+
+
 //-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
 textButton.onclick = () => {
@@ -187,6 +197,8 @@ imgButton.onclick = () => {
 urlInput.oninput = () => {
     imgMeme.style.backgroundImage = `url("${urlInput.value}")`
 }
+
+
 
 
 
