@@ -12,8 +12,6 @@
 
 body {
     background-color: #393e49;
-    display: flex;
-    justify-content: flex-end;
 }
 
 h1 {
@@ -36,7 +34,8 @@ i {
 
 button {
     border:none;
-    padding: 5px
+    padding: 5px;
+    cursor: pointer;
 }
 
 header {
@@ -71,11 +70,9 @@ main {
 
 .meme-editor-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 100vh;
-    flex-grow: 1;
 }
 
 .meme-box {
@@ -95,10 +92,6 @@ main {
     text-align: center;
 }
 
-/* .meme-placeholder {
-    background-color: black;
-    height: 30vh;
-} */
 
 aside {
     background-color: #252935;
@@ -106,6 +99,9 @@ aside {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
     z-index: 2;
     overflow: auto;
 }
@@ -115,12 +111,6 @@ aside button {
     border: none;
 }
 
-.contenedor-menu-imagen {
-    position: relative;
-    left: 89%;
-    bottom: 102vh;
-}
-
 .download-button {
     background-color: green;
     color:white;
@@ -128,6 +118,7 @@ aside button {
     padding: 15px;
     border-radius: 5px;
     margin-top: 40px;
+    width: 200px;
 }
 
 .fa-download {
@@ -194,6 +185,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 15px;
     width: 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -285,3 +277,5 @@ body.light-mode input[type="range"]:hover {
 body.light-mode input[type="color"]:hover {
     background-color: #e0e0e0
 }
+
+

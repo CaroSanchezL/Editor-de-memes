@@ -41,7 +41,7 @@ const lineSpacingTitle = document.querySelector('#line-spacing-title');
 
 
 // Variables input
-
+const asidePanel = document.getElementById("aside-panel");
 const topTextInput = document.getElementById("top-text-input");
 const topTextInMemebox = document.getElementById("top-text-in-memebox")
 const bottomTextInput = document.getElementById("bottom-text-input");
@@ -56,8 +56,10 @@ const textAlignLeft = document.getElementById("text-align-left");
 const textAlignCenter = document.getElementById("text-align-center");
 const textAlignRight = document.getElementById("text-align-right");
 const paddingInput = document.getElementById("padding-input");
-const paddingValueTextMemebox = document.querySelector(".meme-box-text");
-const selectFont = document.getElementById("select-font")
+const selectFont = document.getElementById("select-font");
+const textColorInput = document.getElementById("font-color-input");
+const textBackgroundInput = document.getElementById("text-background-input");
+const textBackgroundTransparent = document.getElementById("transparent-background-checkbox");
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
@@ -135,19 +137,52 @@ textAlignRight.onclick = () => {
     bottomTextInMemebox.style.textAlign = "right";
 }
 
-paddingInput.oninput = () => {
-    paddingValueTextMemebox.padding = paddingInput.value;
+textColorInput.oninput = () => {
+    topTextInMemebox.style.color = textColorInput.value;
+    bottomTextInMemebox.style.color = textColorInput.value;
 }
+
+textBackgroundInput.oninput = () => {
+    containerTopText.style.backgroundColor = textBackgroundInput.value;
+    topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+    containerBottomText.style.backgroundColor = textBackgroundInput.value;
+    bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+}
+
+textBackgroundTransparent.onclick = () => {
+    containerTopText.style.backgroundColor = "inherit";
+    topTextInMemebox.style.backgroundColor = "inherit";
+    containerBottomText.style.backgroundColor = "inherit";
+    bottomTextInMemebox.style.backgroundColor = "inherit";
+}
+
+
+// no tengo la menor idea qué es el contorno//
+
+paddingInput.oninput = () => {
+    topTextInMemebox.style.padding = paddingInput.value + "px";
+    bottomTextInMemebox.style.padding = paddingInput.value + "px";
+}
+
+
+textButton.onclick = () => {
+    asidePanel.style.top = "inherit";
+    asidePanel.style.bottom = "0";
+}
+
+imgButton.onclick = () => {
+    asidePanel.style.bottom = "inherit";
+    asidePanel.style.top = "0";
 
 //-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
 textButton.onclick = () => {
     
-        imgPanel.style.display = "none";
-        textPanel.style.display = "flex";
+    imgPanel.style.display = "none";
+    textPanel.style.display = "flex";
 }
 
 imgButton.onclick = () => {
-        textPanel.style.display = "none";
-        imgPanel.style.display = "flex";
+    textPanel.style.display = "none";
+    imgPanel.style.display = "flex";
 }
