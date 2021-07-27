@@ -188,3 +188,5 @@ urlInput.oninput = () => {
     imgMeme.style.backgroundImage = `url("${urlInput.value}")`
 }
 
+
+
