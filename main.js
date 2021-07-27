@@ -164,6 +164,7 @@ paddingInput.oninput = () => {
     bottomTextInMemebox.style.padding = paddingInput.value + "px";
 }
 
+//-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
 textButton.onclick = () => {
     asidePanel.style.top = "inherit";
@@ -173,16 +174,4 @@ textButton.onclick = () => {
 imgButton.onclick = () => {
     asidePanel.style.bottom = "inherit";
     asidePanel.style.top = "0";
-
-//-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
-
-textButton.onclick = () => {
-    
-    imgPanel.style.display = "none";
-    textPanel.style.display = "flex";
-}
-
-imgButton.onclick = () => {
-    textPanel.style.display = "none";
-    imgPanel.style.display = "flex";
 }
