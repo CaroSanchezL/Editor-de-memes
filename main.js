@@ -175,3 +175,5 @@ imgButton.onclick = () => {
     asidePanel.style.bottom = "inherit";
     asidePanel.style.top = "0";
 }
+
+
