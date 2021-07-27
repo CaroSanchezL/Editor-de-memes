@@ -22,6 +22,7 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 
 //Variables inputs
 
+const urlInput = document.querySelector('#url-input')
 
 
 // VARIABLES PANEL TEXTO
@@ -61,6 +62,10 @@ const textColorInput = document.getElementById("font-color-input");
 const textBackgroundInput = document.getElementById("text-background-input");
 const textBackgroundTransparent = document.getElementById("transparent-background-checkbox");
 
+//-----------------------------------VARIABLES MAIN------------------------------------------------//
+
+const imgMeme = document.querySelector('#meme-img');
+
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
@@ -98,7 +103,7 @@ hideTopText.onclick = () => {
     memeBox.style.justifyContent = "space-between";
     }
     else {
-        memeBox.style.justifyContent = "flex-end";
+        memeBox.style.justifyContent = "center";
         containerTopText.style.display = "none";
     } 
 }
@@ -109,7 +114,7 @@ hideBottomText.onclick = () => {
         memeBox.style.justifyContent = "space-between"
     }
     else {
-        memeBox.style.justifyContent = "flex-start";
+        memeBox.style.justifyContent = "center";
         containerBottomText.style.display = "none";
     }
 }
@@ -175,5 +180,13 @@ imgButton.onclick = () => {
     asidePanel.style.bottom = "inherit";
     asidePanel.style.top = "0";
 }
+
+
+//----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
+
+urlInput.oninput = () => {
+    imgMeme.style.backgroundImage = `url("${urlInput.value}")`
+}
+
 
 
