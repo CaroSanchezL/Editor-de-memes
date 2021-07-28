@@ -205,7 +205,7 @@ urlInput.oninput = () => {
 let colorBackgroundValue = colorBackground.value.toUpperCase();
 colorBackgroundText.textContent = `${colorBackgroundValue}`
 
-colorBackground.onchange = () => {
+colorBackground.oninput = () => {
     imgMeme.style.backgroundColor = `${colorBackground.value}`;
     colorBackgroundValue = colorBackground.value.toUpperCase()
     colorBackgroundText.textContent = `${colorBackgroundValue}`;
