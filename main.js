@@ -25,7 +25,8 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 
 const urlInput = document.querySelector('#url-input')
 const selectBackground = document.querySelector('#select-background');
-
+const colorBackground = document.querySelector('#color-background');
+const colorBackgroundText = document.querySelector('#input-background-text');
 
 // VARIABLES PANEL TEXTO
 
@@ -193,11 +194,21 @@ imgButton.onclick = () => {
     asidePanel.style.top = "0";
 }
 
-
 //----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
 
 urlInput.oninput = () => {
     imgMeme.style.backgroundImage = `url("${urlInput.value}")`
+}
+
+//---------------------------------FUNCIONALIDAD INPUT COLOR FONDO-------------------------------------------//
+
+let colorBackgroundValue = colorBackground.value.toUpperCase();
+colorBackgroundText.textContent = `${colorBackgroundValue}`
+
+colorBackground.onchange = () => {
+    imgMeme.style.backgroundColor = `${colorBackground.value}`;
+    colorBackgroundValue = colorBackground.value.toUpperCase()
+    colorBackgroundText.textContent = `${colorBackgroundValue}`;
 }
 
 //----------------------------------FUNCIONALIDAD FONDO - PRESETS--------------------------------------------//
