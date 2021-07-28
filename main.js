@@ -11,7 +11,8 @@ const darkModeButton = document.querySelector('#dark-mode-button')
 const h1 = document.querySelector('h1');
 
 // VARIABLES PANEL IMAGEN
-const imgPanel = document.querySelector('.img-panel'); 
+const imgPanel = document.querySelector('.img-panel');
+
 
 // Variables títulos
 
@@ -23,6 +24,7 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 //Variables inputs
 
 const urlInput = document.querySelector('#url-input')
+const selectBackground = document.querySelector('#select-background');
 
 
 // VARIABLES PANEL TEXTO
@@ -198,7 +200,9 @@ urlInput.oninput = () => {
     imgMeme.style.backgroundImage = `url("${urlInput.value}")`
 }
 
+//----------------------------------FUNCIONALIDAD FONDO - PRESETS--------------------------------------------//
 
-
-
+selectBackground.onchange = () => {
+    imgMeme.style.backgroundBlendMode = `${selectBackground.value}`;
+}
 

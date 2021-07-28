@@ -81,7 +81,6 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 550px;
-    background-color: black;
     height: 550px;
 }
 
