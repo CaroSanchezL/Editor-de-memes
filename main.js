@@ -173,23 +173,31 @@ paddingInput.oninput = () => {
 
 spaceLineInput.oninput = () => {
     topTextInMemebox.style.lineHeight = spaceLineInput.value;
-    bottomTextInMemebox.style.lineHeight = spaceLineInput.value;
-    
+    bottomTextInMemebox.style.lineHeight = spaceLineInput.value;  
 
 }
 
 
 //-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
+// textButton.onclick = () => {
+//     asidePanel.style.top = "inherit";
+//     asidePanel.style.bottom = "0";
+// }
+
+// imgButton.onclick = () => {
+//     asidePanel.style.bottom = "inherit";
+//     asidePanel.style.top = "0";
+// }
+
 textButton.onclick = () => {
-    asidePanel.style.top = "inherit";
-    asidePanel.style.bottom = "0";
+    asidePanel.classList.add("menu-text");
 }
 
 imgButton.onclick = () => {
-    asidePanel.style.bottom = "inherit";
-    asidePanel.style.top = "0";
+    asidePanel.classList.remove("menu-text");
 }
+
 
 
 //----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
