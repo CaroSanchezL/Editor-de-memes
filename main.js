@@ -96,10 +96,10 @@ darkModeButton.onclick = switchMode;
 //-------- Funcionalidad Menú Texto---------//
 
 topTextInput.oninput = () => { 
-    topTextInMemebox.textContent = topTextInput.value;
+    topTextInMemebox.innerText = topTextInput.value;
 }
 bottomTextInput.oninput = () => {
-    bottomTextInMemebox.textContent = bottomTextInput.value;
+    bottomTextInMemebox.innerText = bottomTextInput.value;
 }
 
 hideTopText.onclick = () => {
