@@ -138,14 +138,24 @@ textColorInput.oninput = () => {
 }
 
 textBackgroundInput.oninput = () => {
+    if (textBackgroundTransparent.checked) {
+        topTextInMemebox.style.backgroundColor = "transparent";
+        bottomTextInMemebox.style.backgroundColor = "transparent";
+    } else {
     topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
     bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+    }
 }
 
-
 textBackgroundTransparent.onclick = () => {
-    topTextInMemebox.classList.toggle("transparent-background");
-    bottomTextInMemebox.classList.toggle("transparent-background");
+    if (textBackgroundTransparent.checked) {
+        topTextInMemebox.style.backgroundColor = "transparent";
+        bottomTextInMemebox.style.backgroundColor = "transparent";
+    } else {
+        topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+        bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
+    }
+
 }
 
 
