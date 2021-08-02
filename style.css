@@ -58,6 +58,7 @@ main {
     height: 100vh;
 }
 
+
 .disappear {
     display: none;
 }
@@ -96,13 +97,13 @@ main {
     box-sizing: border-box;
 }
 
-#meme-img{
+.meme-img{
     background-color: black;
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
-    object-fit: fill;
-    display: flex;
+    object-fit: cover;
+    /* display: flex; */
     flex-grow: 1;
 }
 
@@ -137,7 +138,7 @@ aside {
 }
 
 .transparent-background {
-    background-color: inherit;
+    background-color: transparent;
 }
 
 aside button {
