@@ -52,8 +52,6 @@ const bottomTextInput = document.getElementById("bottom-text-input");
 const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
 const memeBox = document.getElementById("meme-box")
 const hideTopText = document.getElementById("hide-top-text");
-const containerTopText = document.getElementById("container-top-text");
-const containerBottomText = document.getElementById("container-bottom-text")
 const hideBottomText = document.getElementById("hide-bottom-text");
 const fontSizeInput = document.getElementById("font-size-input");
 const textAlignLeft = document.getElementById("text-align-left");
@@ -102,26 +100,13 @@ bottomTextInput.oninput = () => {
     bottomTextInMemebox.innerText = bottomTextInput.value;
 }
 
+
 hideTopText.onclick = () => {
-    if (containerTopText.style.display === "none") {
-    containerTopText.style.display = "block";
-    memeBox.style.justifyContent = "space-between";
-    }
-    else {
-        memeBox.style.justifyContent = "center";
-        containerTopText.style.display = "none";
-    } 
+    topTextInMemebox.classList.toggle("disappear");
 }
 
 hideBottomText.onclick = () => {
-    if (containerBottomText.style.display === "none") {
-        containerBottomText.style.display = "block";
-        memeBox.style.justifyContent = "space-between"
-    }
-    else {
-        memeBox.style.justifyContent = "center";
-        containerBottomText.style.display = "none";
-    }
+    bottomTextInMemebox.classList.toggle("disappear");
 }
 
 selectFont.oninput = () => {
@@ -153,17 +138,15 @@ textColorInput.oninput = () => {
 }
 
 textBackgroundInput.oninput = () => {
-    containerTopText.style.backgroundColor = textBackgroundInput.value;
     topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
-    containerBottomText.style.backgroundColor = textBackgroundInput.value;
     bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
 }
 
+
 textBackgroundTransparent.onclick = () => {
-    containerTopText.style.backgroundColor = "inherit";
-    topTextInMemebox.style.backgroundColor = "inherit";
-    containerBottomText.style.backgroundColor = "inherit";
-    bottomTextInMemebox.style.backgroundColor = "inherit";
+    topTextInMemebox.classList.toggle("transparent-background");
+    bottomTextInMemebox.classList.toggle("transparent-background");
+
 }
 
 
@@ -183,15 +166,6 @@ spaceLineInput.oninput = () => {
 
 //-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
-// textButton.onclick = () => {
-//     asidePanel.style.top = "inherit";
-//     asidePanel.style.bottom = "0";
-// }
-
-// imgButton.onclick = () => {
-//     asidePanel.style.bottom = "inherit";
-//     asidePanel.style.top = "0";
-// }
 
 textButton.onclick = () => {
     asidePanel.classList.add("menu-text");
