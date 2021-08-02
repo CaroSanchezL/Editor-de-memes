@@ -67,7 +67,7 @@ const spaceLineInput = document.getElementById("spaceline-input")
 
 //-----------------------------------VARIABLES MAIN------------------------------------------------//
 
-const imgMeme = document.querySelector('#meme-img');
+const imgMeme = document.getElementById('meme-img');
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
@@ -146,7 +146,6 @@ textBackgroundInput.oninput = () => {
 textBackgroundTransparent.onclick = () => {
     topTextInMemebox.classList.toggle("transparent-background");
     bottomTextInMemebox.classList.toggle("transparent-background");
-
 }
 
 
