@@ -151,7 +151,12 @@ textBackgroundTransparent.onclick = () => {
     if (textBackgroundTransparent.checked) {
         topTextInMemebox.style.backgroundColor = "transparent";
         bottomTextInMemebox.style.backgroundColor = "transparent";
+        bottomTextInMemebox.style.position = "absolute";
+        topTextInMemebox.style.position = "absolute";
+        bottomTextInMemebox.style.bottom = "0";
     } else {
+        bottomTextInMemebox.style.position = "static";
+        topTextInMemebox.style.position = "static";
         topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
         bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
     }
