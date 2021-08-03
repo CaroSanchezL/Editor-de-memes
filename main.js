@@ -218,3 +218,14 @@ selectBackground.onchange = () => {
     imgMeme.style.backgroundBlendMode = `${selectBackground.value}`;
 }
 
+// Variable input imagen
+
+const brightness = document.querySelector('#brightness');
+const opacity = document.querySelector('#opacity');
+const contrast = document.querySelector('#contrast');
+const blur = document.querySelector('#blur');
+const grayscale = document.querySelector('#grayscale');
+const sepia = document.querySelector('#sepia');
+const hueRotation = document.querySelector('#hue-rotation');
+const saturation = document.querySelector('#saturation');
+const invert = document.querySelector('#invert');
