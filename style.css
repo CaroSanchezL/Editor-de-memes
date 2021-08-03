@@ -103,13 +103,13 @@ main {
 }
 
 .meme-box-text {
+    width: 100%;
     background-color: white;
     padding: 15px;
     font-size: 40px;
     color: black;
     text-align: center;
     padding: 25px;
-    /* position: static; */
 }
 
 

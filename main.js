@@ -68,6 +68,10 @@ const spaceLineInput = document.getElementById("spaceline-input")
 //-----------------------------------VARIABLES MAIN------------------------------------------------//
 
 const imgMeme = document.getElementById('meme-img');
+const memeTextBox = document.querySelector(".meme-box-text");
+
+
+
 
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
@@ -123,6 +127,7 @@ textAlignLeft.onclick = () => {
     topTextInMemebox.style.textAlign = "left";
     bottomTextInMemebox.style.textAlign = "left";
 }
+
 textAlignCenter.onclick = () => {
     topTextInMemebox.style.textAlign = "center";
     bottomTextInMemebox.style.textAlign = "center";
@@ -154,6 +159,7 @@ textBackgroundTransparent.onclick = () => {
         bottomTextInMemebox.style.position = "absolute";
         topTextInMemebox.style.position = "absolute";
         bottomTextInMemebox.style.bottom = "0";
+
     } else {
         bottomTextInMemebox.style.position = "static";
         topTextInMemebox.style.position = "static";
