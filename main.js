@@ -12,7 +12,7 @@ const h1 = document.querySelector('h1');
 
 // VARIABLES PANEL IMAGEN
 const imgPanel = document.querySelector('.img-panel');
-
+const imgClosePanel = document.querySelector('.img-panel-close')
 
 // Variables títulos
 
@@ -31,6 +31,8 @@ const colorBackgroundText = document.querySelector('#input-background-text');
 // VARIABLES PANEL TEXTO
 
 const textPanel = document.querySelector('.text-panel');
+const textClosePanel = document.querySelector('.text-panel-close')
+
 // Variables títulos
 
 const TextTitle = document.querySelector('#text-title');
@@ -224,4 +226,40 @@ colorBackground.oninput = () => {
 selectBackground.onchange = () => {
     imgMeme.style.backgroundBlendMode = `${selectBackground.value}`;
 }
+
+
+
+//----------Abrir Paneles Responsive------------//
+
+const imgPanelOpen = () => {
+    if (asidePanel.style.display = "none") {
+        asidePanel.style.display = "block"
+        asidePanel.classList.remove("menu-text");
+    }
+}
+
+imgButton.onclick = imgPanelOpen
+
+
+const textPanelOpen = () => {
+    if (asidePanel.style.display = "none") {
+        asidePanel.style.display = "block"
+        asidePanel.classList.add("menu-text");
+        /* imgPanel.style.display = "none" */
+    }
+}
+
+textButton.onclick = textPanelOpen
+
+//---------Funcionalidad Cerrar Paneles Responsive----------//
+
+/* 
+// 
+
+imgClosePanel.onclick = () => {
+    //asidePanel.style.display = "none";
+    imgClosePanel.style.fontSize = "50px"
+    console.log("boton cerrar");
+}
+ */
 

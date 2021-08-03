@@ -348,12 +348,17 @@ body.light-mode input[type="color"]:hover {
 /* ----------------Responsive PANEL IMAGEN/TEXTO------------ */
 
 @media(max-width: 1100px){
-    .img-panel{
+/*     .img-panel{
         display: none;
     }
     .text-panel{
         display: none;
-    } 
+    }  */
+
+    aside {
+        display: none;
+    }
+
     .img-panel-close{
         display: block;
     }
@@ -386,4 +391,5 @@ body.light-mode input[type="color"]:hover {
         justify-content: center;
     }
 }  
+
 
