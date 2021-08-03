@@ -264,3 +264,34 @@ imgClosePanel.onclick = imgPanelOculto
 
 
 
+
+//---------------Responsive Area de trabajo-------------------//
+
+const medidaMemeBox = document.querySelector(".meme-box")
+const clientWidth = medidaMemeBox.clientWidth
+
+
+const clientHeight = medidaMemeBox.clientHeight
+console.log(clientWidth + "px");
+console.log(clientHeight + "px");
+
+// hasta aca tengo las medidas
+// desde aca "escucha" el cambio de pantalla
+
+
+window.onresize = resize;
+
+function resize()
+{
+    const clientWidth = medidaMemeBox.clientWidth
+    const clientHeight = medidaMemeBox.clientHeight
+    medidaMemeBox.style.height = clientWidth + "px"
+    containerTopText.style.height = "15%"
+    containerBottomText.style.height = "15%"
+    
+}
+
+
+// falta centrar texto verticalmente 
+
+

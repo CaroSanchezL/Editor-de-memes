@@ -85,6 +85,7 @@ main {
     justify-content: space-between;
     width: 550px;
     height: 550px;
+    overflow: hidden;
 }
 
 .meme-box-img {
@@ -107,9 +108,10 @@ main {
 .meme-box-text {
     background-color: white;
     padding: 15px;
-    font-size: 40px;
+    font-size: 5vw;
     color: black;
     text-align: center;
+    
 }
 
 
@@ -174,7 +176,7 @@ aside button {
     max-width: 200px;
     padding: 20px;
     height: 100vh;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 
@@ -386,5 +388,17 @@ body.light-mode input[type="color"]:hover {
     }
     
 }  
+
+@media(max-width: 600px){
+    .meme-box {
+       width: 90vw;
+    }
+    
+}
+
+
+
+
+
 
 
