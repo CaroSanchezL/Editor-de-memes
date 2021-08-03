@@ -68,7 +68,6 @@ const spaceLineInput = document.getElementById("spaceline-input")
 //-----------------------------------VARIABLES MAIN------------------------------------------------//
 
 const imgMeme = document.getElementById('meme-img');
-const memeTextBox = document.querySelector(".meme-box-text");
 
 
 
