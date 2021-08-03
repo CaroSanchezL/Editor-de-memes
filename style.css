@@ -98,6 +98,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
+    object-fit: fill;
     /* display: flex; */
     flex-grow: 1;
 }
