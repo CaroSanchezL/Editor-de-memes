@@ -23,11 +23,12 @@ h1 {
 h2 {
     text-align: center;
     font-size: 18px;
+    margin-bottom: 15px;
 }
 
 h3 {
     font-size: 12px;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 i {
@@ -135,11 +136,37 @@ aside {
     transition: 0.9s;
 }
 
+.option-text-panel {
+    margin-bottom: 25px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+}
 
+.text-align-button {
+    margin-left: 5px;
+}
+
+.font-number-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 9px;
+}
+
+.contorno-button {
+    padding: 8px;
+    border-radius: 3px;
+    
 }
 
 .transparent-background {
@@ -173,7 +200,7 @@ aside button {
 .panel {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 260px;
     padding: 20px;
     height: 100vh;
 }
@@ -207,14 +234,19 @@ input, select, textarea {
     border:none;
     border-radius: 3px;
     height: 25px;
-    margin: 10px 0;
     padding: 3px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 textarea {
     width: 100%;
     height: 30px;
     padding: 6px;
+    margin-bottom: 8px;
 }
 
 .input-color {
@@ -225,6 +257,10 @@ textarea {
     background-color: #393e49;
     padding: 0 2px;
     width: 50%
+}
+
+input[type="number"] {
+    width: 100%;
 }
 
 input[type="range"] {
@@ -247,6 +283,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="checkbox"] {
     height: 15px;
     margin-right: 5px;
+    margin-bottom: 0;
 
 }
 
