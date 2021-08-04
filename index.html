@@ -102,17 +102,17 @@
 
             <section class = "text-panel panel">
                 <h2 id="text-title">TEXTO</h2>
-                <div class= "top-text-panel">
+                <div class= "option-text-panel">
                     <h3 id="top-text-title">SUPERIOR</h3>
                     <textarea id="top-text-input">TOP TEXT</textarea>
                     <label class="row" for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
                 </div>
-                <div class= "bottom-text-panel">
+                <div class= "option-text-panel">
                     <h3 id="bottom-text-title">INFERIOR</h3>
                     <textarea id="bottom-text-input">BOTTOM TEXT</textarea>
                     <label class="row" for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
                 </div>
-                <div class="font">
+                <div class="option-text-panel">
                     <h3 id="font-title">FUENTE</h3>
                     <select name="font-choices" id="select-font">
                         <option value="Arial, Helvetica, sans-serif">Arial</option>
@@ -125,31 +125,47 @@
                         <option value="'Special Elite', cursive">Special Elite</option>
                         <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
                     </select>
-                    <input type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100">
-                    <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
-                    <button class="text-align-button" id="text-align-center"><i class="fas fa-align-center"></i></button>
-                    <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>
-                </div>
-                <div class="text-color-background">
-                    <h3 id="text-color-title">COLOR</h3>
-                    <input type="color" name="font-color" id="font-color-input">
-                    <h3 id="text-background-title">FONDO</h3>
-                    <input type="color" name="text-background" id="text-background-input" value="#ffffff">
-                    <label for="transparent-background"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
-                </div>
-                <div class="text-outline">
-                    <h3 id="text-outline-title">CONTORNO</h3>
-                    <div class="outline-buttons">
-                        <button id="button-no-outline">NINGUNO</button>
-                        <button id="button-light-outline">CLARO</button>
-                        <button id="button-dark-outline">OSCURO</button>
+                    <div class="row">
+                        <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100">
+                        <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
+                        <button class="text-align-button" id="text-align-center"><i class="fas fa-align-center"></i></button>
+                        <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>
                     </div>
                 </div>
-                <div class="text-padding">
-                <h3 id="padding-title">ESPACIADO</h3>
-                <input type="number" id="padding-input" value="25" min="10" max="50">
+                <div class="option-text-panel">
+                    <div class="row">
+                        <div class="column">
+                            <h3 id="text-color-title">COLOR</h3>
+                            <label class="input-color" for="font-color">
+                                <input type="color" name="font-color" id="font-color-input" value="#000000">
+                                <span id="input-background-text"></span>  
+                                <!-- aca Caro hace tu magia no se cómo hiciste para que salga el nombre del color -->
+                            </label>
+                        </div>
+                        <div class="column">
+                            <h3 id="text-background-title">FONDO</h3>
+                            <label class="input-color">
+                                <input type="color" name="text-background" id="text-background-input" value="#ffffff">
+                                <span id="input-background-text"></span>  
+                                <!-- aca Caro hace tu magia no se cómo hiciste para que salga el nombre del color -->
+                            </label>
+                        </div>
+                    </div>
+                    <label class ="row" for="transparent-background"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
                 </div>
-                <div class="line-spacing-input">
+                <div class="option-text-panel">
+                    <h3 id="text-outline-title">CONTORNO</h3>
+                    <div class="outline-buttons">
+                        <button class="contorno-button" id="button-no-outline">Ninguno</button>
+                        <button class="contorno-button" id="button-light-outline">Claro</button>
+                        <button class="contorno-button" id="button-dark-outline">Oscuro</button>
+                    </div>
+                </div>
+                <div class="option-text-panel">
+                    <h3 id="padding-title">ESPACIADO</h3>
+                    <input type="number" id="padding-input" value="25" min="10" max="50">
+                </div>
+                <div class="option-text-panel">
                     <h3 id="line-spacing-title">INTERLINEADO</h3>
                     <select name="spaceline-input" id="spaceline-input">
                         <option value="0.8">0.8</option>
