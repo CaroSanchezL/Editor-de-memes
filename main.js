@@ -223,20 +223,81 @@ selectBackground.onchange = () => {
 const brightness = document.querySelector('#brightness');
 const opacity = document.querySelector('#opacity');
 const contrast = document.querySelector('#contrast');
-const blur = document.querySelector('#blur');
+const inputBlur = document.querySelector('#blur');
 const grayscale = document.querySelector('#grayscale');
 const sepia = document.querySelector('#sepia');
-const hueRotation = document.querySelector('#hue-rotation');
-const saturation = document.querySelector('#saturation');
+const hueRotate = document.querySelector('#hue');
+const saturate = document.querySelector('#saturate');
 const invert = document.querySelector('#invert');
 
-// BRILLO
-
-const mostrarValue = () => {
-    
+//brillo
+const changeValueBrightness = () => {
     const valueBrightness = brightness.value
     imgMeme.style.filter = "brightness(" + valueBrightness + ")";
 }
 
-brightness.onchange = mostrarValue
+brightness.onchange = changeValueBrightness
  
+//opacidad
+const changeValueOpacity = () => {
+    const valueOpacity = opacity.value
+    imgMeme.style.filter = "opacity(" + valueOpacity + ")";
+}
+
+opacity.onchange = changeValueOpacity
+
+//contraste
+const changeValueContrast = () => {
+    const valueContrast = contrast.value
+    imgMeme.style.filter = "contrast(" + valueContrast + "%)";
+}
+
+contrast.onchange = changeValueContrast
+
+//desenfoque
+const changeValueBlur = () => {
+    const valueBlur = inputBlur.value
+    imgMeme.style.filter = "blur(" + valueBlur + "px)";
+}
+
+inputBlur.onchange = changeValueBlur
+
+//escala de grises
+const changeValueGrayscale = () => {
+    const valueGrayscale = grayscale.value
+    imgMeme.style.filter = "grayscale(" + valueGrayscale + "%)";
+}
+
+grayscale.onchange = changeValueGrayscale
+
+//sepia
+const changeValueSepia = () => {
+    const valueSepia = sepia.value
+    imgMeme.style.filter = "sepia(" + valueSepia + "%)";
+}
+
+sepia.onchange = changeValueSepia
+
+//hue
+const changeValueHueRotate = () => {
+    const valueHueRotate = hueRotate.value
+    imgMeme.style.filter = "hue-rotate(" + valueHueRotate + "deg)";
+}
+
+hueRotate.onchange = changeValueHueRotate
+
+//saturado
+const changeValueSaturate = () => {
+    const valueSaturate = saturate.value
+    imgMeme.style.filter = "saturate(" + valueSaturate + "%)";
+}
+
+saturate.onchange = changeValueSaturate
+
+//negativo
+const changeValueInvert = () => {
+    const valueInvert = invert.value
+    imgMeme.style.filter = "invert(" + valueInvert + ")";
+}
+
+invert.onchange = changeValueInvert
