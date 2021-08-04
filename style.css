@@ -174,7 +174,8 @@ aside button {
 .button-header {
     border: none;
     background-color: #191e2b;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #dark-mode-button {
@@ -251,7 +252,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 button:hover, button:focus, #dark-mode-button:hover, #dark-mode-button:focus, input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus {
-    background-color: #4e5565
+    background-color: #4e5565;
 }
 
 input[type="range"]:focus {
