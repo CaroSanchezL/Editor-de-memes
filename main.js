@@ -229,3 +229,14 @@ const sepia = document.querySelector('#sepia');
 const hueRotation = document.querySelector('#hue-rotation');
 const saturation = document.querySelector('#saturation');
 const invert = document.querySelector('#invert');
+
+// BRILLO
+
+const mostrarValue = () => {
+    
+    const valueBrightness = brightness.value
+    imgMeme.style.filter = "brightness(" + valueBrightness + ")";
+}
+
+brightness.onchange = mostrarValue
+ 
