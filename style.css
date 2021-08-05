@@ -105,11 +105,11 @@ main {
     flex-grow: 1;
 }
 
-/* ----------------------------------------------------- */
 
 .meme-box-text {
     background-color: white;
-    padding: 15px;
+    padding: 13px;
+    /* margin-bottom: 25px; */
     font-size: 40px;
     color: black;
     text-align: center;
@@ -362,6 +362,10 @@ body.light-mode input[type="color"]:hover {
         display: block;
         
     }
+
+    .meme-box-text{
+        padding-top: 2%;
+    }
    
 }
  
@@ -396,7 +400,7 @@ body.light-mode input[type="color"]:hover {
        width: 90vw;
     }
     .meme-box-text{
-        font-size: 5vw;
+        font-size: 6vw;
     }
     
 }
