@@ -105,10 +105,12 @@ main {
     flex-grow: 1;
 }
 
+/* ----------------------------------------------------- */
+
 .meme-box-text {
     background-color: white;
     padding: 15px;
-    font-size: 5vw;
+    font-size: 40px;
     color: black;
     text-align: center;
     
@@ -392,6 +394,9 @@ body.light-mode input[type="color"]:hover {
 @media(max-width: 600px){
     .meme-box {
        width: 90vw;
+    }
+    .meme-box-text{
+        font-size: 5vw;
     }
     
 }
