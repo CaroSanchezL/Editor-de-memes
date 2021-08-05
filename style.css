@@ -136,9 +136,8 @@ aside {
     height: 20px;
     background-color:#191e2b;
     display: none;
-    position: relative;
-    /* font-size: 18px; */
-    left: 85%;
+    position: fixed;
+    left: 97%;
     top: 1%;
 }
 
@@ -357,43 +356,22 @@ body.light-mode input[type="color"]:hover {
     aside {
         display: none;
     }
-
     .button-x{
-        display: block;
-        
+        display: block;   
     }
-
     .meme-box-text{
         padding-top: 2%;
     }
-   
 }
  
-
-/*----------- Responsive HEADER-------*/
 @media(max-width: 700px){
     header{
         height: 15vh;
     }
-   
-}
-
-@media(max-width: 700px){
     h1{
         font-size: 1.5em;
-        
     }
 }
-
- @media(max-width: 400px){
-    header {
-        height: auto;
-    }
-    .buttons-container-header {
-        justify-content: center;
-    }
-    
-}  
 
 @media(max-width: 600px){
     .meme-box {
@@ -402,8 +380,24 @@ body.light-mode input[type="color"]:hover {
     .meme-box-text{
         font-size: 6vw;
     }
-    
+    .button-x{
+        left: 95%;
+    }
 }
+
+
+@media(max-width: 400px){
+    header {
+        height: auto;
+    }
+    .buttons-container-header {
+        justify-content: center;
+    }
+    .button-x{
+        left: 93%;
+    }
+}  
+
 
 
 
