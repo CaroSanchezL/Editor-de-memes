@@ -308,32 +308,22 @@ invert.onchange = changeValueInvert
 const restore = () => {
     brightness.value = "1";
     imgMeme.style.filter = "brightness(1)";
-
     opacity.value = "1";
     imgMeme.style.filter = "opacity(1)";
-
     contrast.value = "100";
     imgMeme.style.filter = "contrast(100%)";
-
     inputBlur.value = "0";
     imgMeme.style.filter = "blur(0px)";
-
     grayscale.value = "0"
     imgMeme.style.filter = "grayscale(0%)";
-
     sepia.value = "0";
     imgMeme.style.filter = "sepia(0%)";
-
     hueRotate.value = "0";
     imgMeme.style.filter = "hue-rotate(0deg)";
-
     saturate.value = "100";
     imgMeme.style.filter = "saturate(100%)";
-
     invert.value = "0";
     imgMeme.style.filter = "invert(0)";
-
-    console.log("funciona");
 }
 
 filterButton.onclick = restore
