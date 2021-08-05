@@ -136,7 +136,7 @@ aside {
     transition: 0.9s;
 }
 
-.option-text-panel {
+.option-panel {
     margin-bottom: 25px;
 }
 
@@ -192,11 +192,6 @@ aside button {
     color:white;
 }
 
-.img-panel, .text-panel {
-    max-width: 200px;
-    background-color: #191e2b;
-}
-
 .panel {
     display: flex;
     flex-direction: column;
@@ -204,7 +199,6 @@ aside button {
     padding: 20px;
     height: 100vh;
 }
-
 
 .button-header {
     border: none;
