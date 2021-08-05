@@ -159,6 +159,7 @@ aside {
 .column {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 9px;
 }
@@ -207,6 +208,11 @@ aside button {
     border-radius: 5px;
 }
 
+.filter-button {
+    padding: 10px;
+    margin: 10px 0;
+}
+
 #dark-mode-button {
     background-color: #191e2b;
 }
@@ -217,11 +223,17 @@ aside button {
 }
 
 label {
+    width: 100%;
     font-size: 12px;
     display: flex;
     flex-direction: column;
     border-radius: 3px;
 }
+
+.label-filter {
+    margin: 15px 0;
+}
+
 
 input, select, textarea {
     background-color: #393e49;
@@ -229,11 +241,17 @@ input, select, textarea {
     border-radius: 3px;
     height: 25px;
     padding: 3px;
+    border-radius: 3px;
 }
 
 select {
     width: 100%;
     margin-bottom: 5px;
+    height: 36px;
+}
+
+#select-background {
+    margin: 0;
 }
 
 textarea {
@@ -245,12 +263,13 @@ textarea {
 
 .input-color {
     display: flex;
-    height: 30px;
+    height: 36px;
     flex-direction: row;
     align-items: center;
     background-color: #393e49;
     padding: 0 2px;
-    width: 50%
+    width: 50%;
+    margin-right: 10px;
 }
 
 input[type="number"] {
@@ -260,8 +279,10 @@ input[type="number"] {
 input[type="range"] {
     height: 6px;
     border-radius: 10px;
+    margin: 10px 0;
     background-color: #5a5d68;
     appearance: none;
+    width:215px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -273,12 +294,15 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
+input[type="url"] {
+    width:100%;
+}
+
 
 input[type="checkbox"] {
     height: 15px;
     margin-right: 5px;
     margin-bottom: 0;
-
 }
 
 
