@@ -117,18 +117,6 @@ main {
     
 }
 
-.no-outline {
-    -webkit-text-stroke: 0px;
-}
-
-.light-outline {
-    -webkit-text-stroke: 2px white;
-}
-
-.dark-outline {
-    -webkit-text-stroke: 2px black;
-}
-
 aside {
     background-color: #252935;
     display: flex;
