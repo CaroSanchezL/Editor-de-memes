@@ -46,7 +46,7 @@ header {
     align-items: center;
     background-color: #191e2b;
     padding: 15px;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     z-index: 0;
 }
@@ -111,8 +111,21 @@ main {
     color: black;
     text-align: center;
     padding: 25px;
+    font-weight: 600;
+    
 }
 
+.no-outline {
+    -webkit-text-stroke: 0px;
+}
+
+.light-outline {
+    -webkit-text-stroke: 2px white;
+}
+
+.dark-outline {
+    -webkit-text-stroke: 2px black;
+}
 
 aside {
     background-color: #252935;
