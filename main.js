@@ -338,19 +338,20 @@ const buttonLightOutline = document.querySelector('#button-light-outline');
 const buttonDarkOutline = document.querySelector('#button-dark-outline');
 
 const noOutline = () => {
-    topTextInMemebox.classList.add("no-outline")
-    bottomTextInMemebox.classList.add("no-outline")
+    topTextInMemebox.style.textShadow = ("none")
+    bottomTextInMemebox.style.textShadow = ("none")   
 }
 buttonNoOutline.onclick = noOutline
 
 const lightOutline = () => {
-    topTextInMemebox.classList.add("light-outline")
-    bottomTextInMemebox.classList.add("light-outline")
+    topTextInMemebox.style.textShadow = ("2px 2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px 0px 0 #FFFFFF, 0px 2px 0 #FFFFFF, -2px 0px 0 #FFFFFF, 0px -2px 0 #FFFFFF")
+    bottomTextInMemebox.style.textShadow = ("2px 2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px 0px 0 #FFFFFF, 0px 2px 0 #FFFFFF, -2px 0px 0 #FFFFFF, 0px -2px 0 #FFFFFF")   
 }
 buttonLightOutline.onclick = lightOutline
 
 const darkOutline = () => {
-    topTextInMemebox.classList.add("dark-outline")
-    bottomTextInMemebox.classList.add("dark-outline")
+    topTextInMemebox.style.textShadow = ("2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000")
+    bottomTextInMemebox.style.textShadow = ("2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000")   
 }
 buttonDarkOutline.onclick = darkOutline
+
