@@ -338,22 +338,19 @@ const buttonLightOutline = document.querySelector('#button-light-outline');
 const buttonDarkOutline = document.querySelector('#button-dark-outline');
 
 const noOutline = () => {
-    console.log("123");
     topTextInMemebox.classList.add("no-outline")
     bottomTextInMemebox.classList.add("no-outline")
 }
 buttonNoOutline.onclick = noOutline
 
 const lightOutline = () => {
-    console.log("123");
     topTextInMemebox.classList.add("light-outline")
-    bottomTextInMemebox.classList.add("no-outline")
+    bottomTextInMemebox.classList.add("light-outline")
 }
 buttonLightOutline.onclick = lightOutline
 
 const darkOutline = () => {
-    console.log("123");
     topTextInMemebox.classList.add("dark-outline")
-    bottomTextInMemebox.classList.add("no-outline")
+    bottomTextInMemebox.classList.add("dark-outline")
 }
 buttonDarkOutline.onclick = darkOutline
