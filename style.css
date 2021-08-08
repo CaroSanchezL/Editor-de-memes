@@ -200,7 +200,7 @@ aside button {
     max-width: 260px;
     padding: 20px;
     height: 100vh;
-    overflow: hidden; /* AGREGADO PARA PANEL */
+    overflow: hidden;
     overflow-y: scroll;
 }
 
