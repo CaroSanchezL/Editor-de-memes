@@ -39,6 +39,8 @@ const urlInput = document.querySelector('#url-input')
 const selectBackground = document.querySelector('#select-background');
 const colorBackground = document.querySelector('#color-background');
 const colorBackgroundImage = document.querySelector('#input-background-image');
+const inputBackgroundTextSpan = document.getElementById("input-background-text");
+const colorInputFontTextSpan = document.getElementById("input-font-color-text-span")
 
 // VARIABLES PANEL TEXTO
 
@@ -148,10 +150,20 @@ textAlignRight.onclick = () => {
     bottomTextInMemebox.style.textAlign = "right";
 }
 
+
+ 
+colorInputFontTextSpan.textContent = textColorInput.value.toUpperCase();
+
 textColorInput.oninput = () => {
     topTextInMemebox.style.color = textColorInput.value;
     bottomTextInMemebox.style.color = textColorInput.value;
+    colorInputFontTextSpan.textContent = textColorInput.value.toUpperCase();
 }
+
+
+inputBackgroundTextSpan.textContent = textBackgroundInput.value.toUpperCase();
+
+
 
 textBackgroundInput.oninput = () => {
     if (textBackgroundTransparent.checked) {
@@ -161,6 +173,10 @@ textBackgroundInput.oninput = () => {
     topTextInMemebox.style.backgroundColor = textBackgroundInput.value;
     bottomTextInMemebox.style.backgroundColor = textBackgroundInput.value;
     }
+
+inputBackgroundTextSpan.textContent = textBackgroundInput.value.toUpperCase();
+
+
 }
 
 textBackgroundTransparent.onclick = () => {
