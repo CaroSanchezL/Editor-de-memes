@@ -38,7 +38,7 @@ const backgroundImgTitle = document.querySelector('#background-img-title');
 const urlInput = document.querySelector('#url-input')
 const selectBackground = document.querySelector('#select-background');
 const colorBackground = document.querySelector('#color-background');
-const colorBackgroundText = document.querySelector('#input-background-text');
+const colorBackgroundImage = document.querySelector('#input-background-image');
 
 // VARIABLES PANEL TEXTO
 
@@ -216,12 +216,12 @@ urlInput.oninput = () => {
 //---------------------------------FUNCIONALIDAD INPUT COLOR FONDO-------------------------------------------//
 
 let colorBackgroundValue = colorBackground.value.toUpperCase();
-colorBackgroundText.textContent = `${colorBackgroundValue}`
+colorBackgroundImage.textContent = `${colorBackgroundValue}`
 
 colorBackground.oninput = () => {
     imgMeme.style.backgroundColor = `${colorBackground.value}`;
     colorBackgroundValue = colorBackground.value.toUpperCase()
-    colorBackgroundText.textContent = `${colorBackgroundValue}`;
+    colorBackgroundImage.textContent = `${colorBackgroundValue}`;
 }
 
 //----------------------------------FUNCIONALIDAD FONDO - PRESETS--------------------------------------------//
