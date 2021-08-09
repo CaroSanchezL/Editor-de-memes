@@ -12,7 +12,11 @@ const h1 = document.querySelector('h1');
 
 // VARIABLES PANEL IMAGEN
 const imgPanel = document.querySelector('.img-panel');
+
+const imgClosePanel = document.querySelector('.img-panel-close')
+
 const filterButton = document.querySelector('.filter-button')
+
 
 // Variable input imagen
 
@@ -45,6 +49,8 @@ const colorInputFontTextSpan = document.getElementById("input-font-color-text-sp
 // VARIABLES PANEL TEXTO
 
 const textPanel = document.querySelector('.text-panel');
+
+
 // Variables títulos
 
 const TextTitle = document.querySelector('#text-title');
@@ -247,6 +253,73 @@ selectBackground.onchange = () => {
 }
 
 
+
+
+//----------Abrir Paneles Responsive------------//
+
+const imgPanelOpen = () => {
+    if (asidePanel.style.display = "none") {
+        asidePanel.style.display = "block"
+        asidePanel.classList.remove("menu-text");
+    }
+}
+
+imgButton.onclick = imgPanelOpen
+
+
+const textPanelOpen = () => {
+    if (asidePanel.style.display = "none") {
+        asidePanel.style.display = "block"
+        asidePanel.classList.add("menu-text");
+        
+    }
+}
+
+textButton.onclick = textPanelOpen
+
+//---------Funcionalidad Cerrar Paneles Responsive----------//
+
+
+const imgPanelOculto = () => {
+    asidePanel.style.display = "none" 
+}
+
+
+imgClosePanel.onclick = imgPanelOculto
+
+
+
+
+//---------------Responsive Area de trabajo-------------------//
+
+const medidaMemeBox = document.querySelector(".meme-box")
+const clientWidth = medidaMemeBox.clientWidth
+
+
+const clientHeight = medidaMemeBox.clientHeight
+console.log(clientWidth + "px");
+console.log(clientHeight + "px");
+
+// hasta aca tengo las medidas
+// desde aca "escucha" el cambio de pantalla
+
+
+window.onresize = resize;
+
+function resize()
+{
+    const clientWidth = medidaMemeBox.clientWidth
+    const clientHeight = medidaMemeBox.clientHeight
+    medidaMemeBox.style.height = clientWidth + "px"
+    containerTopText.style.height = "15%"
+    containerBottomText.style.height = "15%"
+    
+}
+
+
+// falta centrar texto verticalmente 
+
+
 //----------------------------FILTROS IMAGEN------------------------//
 //brillo
 const changeValueBrightness = () => {
@@ -345,7 +418,6 @@ const restore = () => {
 
 filterButton.onclick = restore
 
-
 //----------------------CONTORNO-------------------------//
 
 
@@ -370,4 +442,5 @@ const darkOutline = () => {
     bottomTextInMemebox.style.textShadow = ("2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000")   
 }
 buttonDarkOutline.onclick = darkOutline
+
 
