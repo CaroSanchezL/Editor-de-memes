@@ -32,10 +32,12 @@
         </div>
     </main>
     <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
+
     <aside class='side-panel' id="aside-panel">
         <button class="img-panel-close button-x" id="panel-close">
             <i class="fas fa-times"></i>
         </button>
+
         
     <!-------------------------------------------- MENU IMAGEN --------------------------------------------------->
 
@@ -49,16 +51,18 @@
                     <h3 id="url-title">URL</h3>
                     <input type="url" id="url-input">
                 </div>
-                <div class=" option-panel format-panel">
+                <div class="option-panel">
     <!-------------------------------------------- OPCIONES FONDO ------------------------------------------------->
                     <h3 id="background-img-title">FONDO</h3>
-                    <div class="row">
-                        <label for="color-background" class="input-color">
-                            <input type="color" id="color-background" name="color-background" value="#FFFFFF">
-                            <span id="input-background-text"></span>  
-                            <!-- En este span va el texto que dice que color es -->
-                        </label>
-                        <div class="input-background">
+                    <div class="color-panel-text">
+                        <div class="column">
+                            <label for="color-background" class="input-color">
+                                <input type="color" id="color-background" name="color-background" value="#FFFFFF">
+                                <span id="input-background-image"></span>  
+                                <!-- En este span va el texto que dice que color es -->
+                            </label>
+                        </div>
+                        <div class="column">
                             <select name="background-choices" id="select-background">
                                 <option value="none">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
@@ -139,13 +143,12 @@
                     </div>
                 </div>
                 <div class="option-panel">
-                    <div class="row">
+                    <div class="color-panel-text">
                         <div class="column">
                             <h3 id="text-color-title">COLOR</h3>
-                            <label class="input-color" for="font-color">
+                            <label class="input-color" for="font-color-input">
                                 <input type="color" name="font-color" id="font-color-input" value="#000000">
-                                <span id="input-background-text"></span>  
-                                <!-- aca Caro hace tu magia no se cómo hiciste para que salga el nombre del color -->
+                                <span id="input-font-color-text-span"></span> 
                             </label>
                         </div>
                         <div class="column">
@@ -153,7 +156,6 @@
                             <label class="input-color">
                                 <input type="color" name="text-background" id="text-background-input" value="#ffffff">
                                 <span id="input-background-text"></span>  
-                                <!-- aca Caro hace tu magia no se cómo hiciste para que salga el nombre del color -->
                             </label>
                         </div>
                     </div>
