@@ -121,8 +121,6 @@ aside {
     background-color: #252935;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    /* justify-content: flex-end; */
     position: fixed;
     top: 0;
     bottom: -100%;
