@@ -273,8 +273,15 @@ const clientWidth = medidaMemeBox.clientWidth
 
 
 const clientHeight = medidaMemeBox.clientHeight
-console.log(clientWidth + "px");
-console.log(clientHeight + "px");
+
+const funcion = () =>{  
+if (clientWidth != clientHeight) {
+    medidaMemeBox.style.height = clientWidth + "px"
+    }
+}
+
+funcion()
+
 
 window.onresize = resize;
 
@@ -283,9 +290,7 @@ function resize()
     const clientWidth = medidaMemeBox.clientWidth
     const clientHeight = medidaMemeBox.clientHeight
     medidaMemeBox.style.height = clientWidth + "px"
-    containerTopText.style.height = "15%"
-    containerBottomText.style.height = "15%"
-    
+      
 }
 
 //----------------------------FILTROS IMAGEN------------------------//

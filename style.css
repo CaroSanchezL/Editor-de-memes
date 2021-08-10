@@ -451,8 +451,9 @@ body.light-mode input[type="color"]:hover {
         display: block;   
     }
     .meme-box-text{
-        padding-top: 2%;
+        padding: 5% 0;
     }
+
 }
  
 @media(max-width: 700px){
@@ -467,6 +468,7 @@ body.light-mode input[type="color"]:hover {
 @media(max-width: 600px){
     .meme-box {
        width: 90vw;
+       
     }
     .meme-box-text{
         font-size: 6vw;
@@ -474,6 +476,9 @@ body.light-mode input[type="color"]:hover {
     .button-x{
         left: 95%;
     }
+
+    /* forma */
+
 }
 
 
