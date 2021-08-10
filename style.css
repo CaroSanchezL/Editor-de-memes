@@ -19,7 +19,6 @@ h1 {
     margin: 10px;
 }
 
-
 h2 {
     text-align: center;
     font-size: 18px;
@@ -35,6 +34,9 @@ i {
     margin-right: 5px;
 }
 
+.fa-lightbulb {
+    color: #e4c414;
+}
 button {
     border:none;
     padding: 5px;
@@ -244,13 +246,12 @@ aside button {
     
 }
 
-#dark-mode-button {
+#light-mode-button {
     background-color: #191e2b;
 }
 
-#light-mode-button {
+#dark-mode-button {
     background-color: #d3d3d3;
-    display: none;
 }
 
 label {
@@ -351,7 +352,7 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 50%;
 }
 
-button:hover, button:focus, #dark-mode-button:hover, #dark-mode-button:focus, input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus {
+button:hover, button:focus, #light-mode-button:hover, #light-mode-button:focus, input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus {
     background-color: #4e5565;
 }
 
@@ -419,7 +420,7 @@ body.light-mode input[type="range"] {
     background-color: #5a5d68;
 }
 
-body.light-mode button:hover, body.light-mode button:focus, #light-mode-button:hover, #light-mode-button:focus, body.light-mode input:not(.input-filter):hover, body.light-mode input:focus, body.light-mode select:hover, body.light-mode select:focus, body.light-mode textarea:hover, body.light-mode textarea:focus {
+body.light-mode button:hover, body.light-mode button:focus, #dark-mode-button:hover, #dark-mode-button:focus, body.light-mode input:not(.input-filter):hover, body.light-mode input:focus, body.light-mode select:hover, body.light-mode select:focus, body.light-mode textarea:hover, body.light-mode textarea:focus {
     background-color: #bdbdbd
 }
 
