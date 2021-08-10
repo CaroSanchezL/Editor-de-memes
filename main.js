@@ -274,6 +274,7 @@ const clientWidth = medidaMemeBox.clientWidth
 
 const clientHeight = medidaMemeBox.clientHeight
 
+
 const funcion = () =>{  
 if (clientWidth != clientHeight) {
     medidaMemeBox.style.height = clientWidth + "px"
@@ -281,7 +282,6 @@ if (clientWidth != clientHeight) {
 }
 
 funcion()
-
 
 window.onresize = resize;
 
