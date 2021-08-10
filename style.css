@@ -241,6 +241,7 @@ aside button {
 .filter-button {
     padding: 10px;
     margin: 10px 0;
+    
 }
 
 #dark-mode-button {
@@ -497,6 +498,10 @@ body.light-mode input[type="color"]:hover {
     input[type="range"]{
         width: 100%;
     }
+    .outline-buttons{
+        justify-content: space-evenly;
+    }
+    
 }  
 
 
