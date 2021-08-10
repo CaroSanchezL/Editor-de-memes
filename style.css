@@ -498,6 +498,11 @@ body.light-mode input[type="color"]:hover {
     input[type="range"]{
         width: 100%;
     }
+
+    .filter-button{
+        margin: 0 25%;
+    }
+
     .outline-buttons{
         justify-content: space-evenly;
     }
