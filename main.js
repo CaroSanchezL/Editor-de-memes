@@ -90,9 +90,6 @@ const spaceLineInput = document.getElementById("spaceline-input")
 const imgMeme = document.getElementById('meme-img');
 
 
-
-
-
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
 lightModeButton.style.display = 'none';
@@ -156,8 +153,6 @@ textAlignRight.onclick = () => {
     bottomTextInMemebox.style.textAlign = "right";
 }
 
-
- 
 colorInputFontTextSpan.textContent = textColorInput.value.toUpperCase();
 
 textColorInput.oninput = () => {
@@ -169,8 +164,6 @@ textColorInput.oninput = () => {
 
 inputBackgroundTextSpan.textContent = textBackgroundInput.value.toUpperCase();
 
-
-
 textBackgroundInput.oninput = () => {
     if (textBackgroundTransparent.checked) {
         topTextInMemebox.style.backgroundColor = "transparent";
@@ -181,8 +174,6 @@ textBackgroundInput.oninput = () => {
     }
 
 inputBackgroundTextSpan.textContent = textBackgroundInput.value.toUpperCase();
-
-
 }
 
 textBackgroundTransparent.onclick = () => {
@@ -202,9 +193,6 @@ textBackgroundTransparent.onclick = () => {
 
 }
 
-
-// no tengo la menor idea qué es el contorno//
-
 paddingInput.oninput = () => {
     topTextInMemebox.style.padding = paddingInput.value + "px";
     bottomTextInMemebox.style.padding = paddingInput.value + "px";
@@ -219,7 +207,6 @@ spaceLineInput.oninput = () => {
 
 //-------------------------------------FUNCIONALIDAD BOTONES TEXTO/IMAGEN--------------------------------------//
 
-
 textButton.onclick = () => {
     asidePanel.classList.add("menu-text");
 }
@@ -227,7 +214,6 @@ textButton.onclick = () => {
 imgButton.onclick = () => {
     asidePanel.classList.remove("menu-text");
 }
-
 
 //----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
 
@@ -252,9 +238,6 @@ selectBackground.onchange = () => {
     imgMeme.style.backgroundBlendMode = `${selectBackground.value}`;
 }
 
-
-
-
 //----------Abrir Paneles Responsive------------//
 
 const imgPanelOpen = () => {
@@ -278,17 +261,10 @@ const textPanelOpen = () => {
 textButton.onclick = textPanelOpen
 
 //---------Funcionalidad Cerrar Paneles Responsive----------//
-
-
 const imgPanelOculto = () => {
     asidePanel.style.display = "none" 
 }
-
-
 imgClosePanel.onclick = imgPanelOculto
-
-
-
 
 //---------------Responsive Area de trabajo-------------------//
 
@@ -299,10 +275,6 @@ const clientWidth = medidaMemeBox.clientWidth
 const clientHeight = medidaMemeBox.clientHeight
 console.log(clientWidth + "px");
 console.log(clientHeight + "px");
-
-// hasta aca tengo las medidas
-// desde aca "escucha" el cambio de pantalla
-
 
 window.onresize = resize;
 
@@ -316,12 +288,8 @@ function resize()
     
 }
 
-
-// falta centrar texto verticalmente 
-
-
 //----------------------------FILTROS IMAGEN------------------------//
-//brillo
+
 const changeValueBrightness = () => {
     const valueBrightness = brightness.value;
     imgMeme.style.filter = "brightness(" + valueBrightness + ")";
@@ -329,7 +297,7 @@ const changeValueBrightness = () => {
 
 brightness.onchange = changeValueBrightness
  
-//opacidad
+
 const changeValueOpacity = () => {
     const valueOpacity = opacity.value;
     imgMeme.style.filter = "opacity(" + valueOpacity + ")";
@@ -337,7 +305,7 @@ const changeValueOpacity = () => {
 
 opacity.onchange = changeValueOpacity
 
-//contraste
+
 const changeValueContrast = () => {
     const valueContrast = contrast.value;
     imgMeme.style.filter = "contrast(" + valueContrast + "%)";
@@ -345,7 +313,7 @@ const changeValueContrast = () => {
 
 contrast.onchange = changeValueContrast
 
-//desenfoque
+
 const changeValueBlur = () => {
     const valueBlur = inputBlur.value;
     imgMeme.style.filter = "blur(" + valueBlur + "px)";
@@ -353,7 +321,7 @@ const changeValueBlur = () => {
 
 inputBlur.onchange = changeValueBlur
 
-//escala de grises
+
 const changeValueGrayscale = () => {
     const valueGrayscale = grayscale.value;
     imgMeme.style.filter = "grayscale(" + valueGrayscale + "%)";
@@ -361,7 +329,7 @@ const changeValueGrayscale = () => {
 
 grayscale.onchange = changeValueGrayscale
 
-//sepia
+
 const changeValueSepia = () => {
     const valueSepia = sepia.value;
     imgMeme.style.filter = "sepia(" + valueSepia + "%)";
@@ -369,7 +337,7 @@ const changeValueSepia = () => {
 
 sepia.onchange = changeValueSepia
 
-//hue
+
 const changeValueHueRotate = () => {
     const valueHueRotate = hueRotate.value;
     imgMeme.style.filter = "hue-rotate(" + valueHueRotate + "deg)";
@@ -377,7 +345,7 @@ const changeValueHueRotate = () => {
 
 hueRotate.onchange = changeValueHueRotate
 
-//saturado
+
 const changeValueSaturate = () => {
     const valueSaturate = saturate.value;
     imgMeme.style.filter = "saturate(" + valueSaturate + "%)";
@@ -385,7 +353,7 @@ const changeValueSaturate = () => {
 
 saturate.onchange = changeValueSaturate
 
-//negativo
+
 const changeValueInvert = () => {
     const valueInvert = invert.value;
     imgMeme.style.filter = "invert(" + valueInvert + ")";

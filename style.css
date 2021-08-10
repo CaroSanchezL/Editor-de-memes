@@ -486,6 +486,17 @@ body.light-mode input[type="color"]:hover {
     .button-x{
         left: 93%;
     }
+
+    aside{
+        width: 100vw;
+    }
+
+    .panel {
+        max-width: 100%;
+    }
+    input[type="range"]{
+        width: 100%;
+    }
 }  
 
 
