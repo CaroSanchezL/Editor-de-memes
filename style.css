@@ -460,6 +460,9 @@ body.light-mode input[type="color"]:hover {
     header{
         height: 15vh;
     }
+    main{
+        height: 95vh;
+    }
     h1{
         font-size: 1.5em;
     }
@@ -468,7 +471,6 @@ body.light-mode input[type="color"]:hover {
 @media(max-width: 600px){
     .meme-box {
        width: 90vw;
-       
     }
     .meme-box-text{
         font-size: 6vw;
@@ -476,8 +478,6 @@ body.light-mode input[type="color"]:hover {
     .button-x{
         left: 95%;
     }
-
-    /* forma */
 
 }
 
@@ -512,6 +512,9 @@ body.light-mode input[type="color"]:hover {
         justify-content: space-evenly;
     }
     
+    body{
+        overflow: hidden;
+    }
 }  
 
 
