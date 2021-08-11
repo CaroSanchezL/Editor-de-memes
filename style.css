@@ -118,13 +118,12 @@ main {
 .meme-box-text {
     width: 100%;
     background-color: white;
-    /*padding: 13px;*/
-    /* margin-bottom: 25px; */
     font-size: 40px;
     color: black;
     text-align: center;
     padding: 25px;
-    font-weight: 600;
+    font-weight: 500;
+    z-index: 1;
 }
 
 aside {
@@ -149,11 +148,7 @@ aside {
     top: 1%;
 }
 
-.menu-text {
-    top: -100%;
-    bottom: 0;
-    transition: 0.9s;
-}
+
 
 .option-panel {
     margin-bottom: 25px;
@@ -231,6 +226,12 @@ aside button {
     height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.menu-text {
+    top: -100%;
+    bottom: 0;
+    transition: 0.9s;
 }
 
 .button-header {
