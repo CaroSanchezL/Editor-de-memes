@@ -92,19 +92,11 @@ const imgMeme = document.getElementById('meme-img');
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
 
-lightModeButton.style.display = 'none';
-darkModeButton.style.display = 'block';
 
 const switchMode = () => {
-    body.classList.toggle('light-mode')
-
-    if (darkModeButton.style.display === 'none') {
-        lightModeButton.style.display = 'none';
-        darkModeButton.style.display = 'block';        ;
-    } else {
-        lightModeButton.style.display = 'block';
-        darkModeButton.style.display = 'none';
-    }
+    body.classList.toggle('light-mode');
+    darkModeButton.classList.toggle('disappear');
+    lightModeButton.classList.toggle('disappear');
 }
 
 lightModeButton.onclick = switchMode;
