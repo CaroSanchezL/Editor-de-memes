@@ -12,11 +12,8 @@ const h1 = document.querySelector('h1');
 
 // VARIABLES PANEL IMAGEN
 const imgPanel = document.querySelector('.img-panel');
-
 const imgClosePanel = document.querySelector('.img-panel-close')
-
 const filterButton = document.querySelector('.filter-button')
-
 
 // Variable input imagen
 
@@ -49,6 +46,9 @@ const colorInputFontTextSpan = document.getElementById("input-font-color-text-sp
 // VARIABLES PANEL TEXTO
 
 const textPanel = document.querySelector('.text-panel');
+const buttonNoOutline = document.querySelector('#button-no-outline');
+const buttonLightOutline = document.querySelector('#button-light-outline');
+const buttonDarkOutline = document.querySelector('#button-dark-outline');
 
 
 // Variables títulos
@@ -88,10 +88,11 @@ const spaceLineInput = document.getElementById("spaceline-input")
 //-----------------------------------VARIABLES MAIN------------------------------------------------//
 
 const imgMeme = document.getElementById('meme-img');
-
+const medidaMemeBox = document.querySelector(".meme-box")
+const clientWidth = medidaMemeBox.clientWidth
+const clientHeight = medidaMemeBox.clientHeight
 
 //-------------------------------FUNCIONALIDAD MODO OSCURO--------------------------------------//
-
 
 const switchMode = () => {
     body.classList.toggle('light-mode');
@@ -111,7 +112,6 @@ topTextInput.oninput = () => {
 bottomTextInput.oninput = () => {
     bottomTextInMemebox.innerText = bottomTextInput.value;
 }
-
 
 hideTopText.onclick = () => {
     topTextInMemebox.classList.toggle("disappear");
@@ -258,20 +258,15 @@ const imgPanelOculto = () => {
 }
 imgClosePanel.onclick = imgPanelOculto
 
-//---------------Responsive Area de trabajo-------------------//
+//---------------Responsive Main-------------------//
 
-const medidaMemeBox = document.querySelector(".meme-box")
-const clientWidth = medidaMemeBox.clientWidth
-const clientHeight = medidaMemeBox.clientHeight
-
-
-const funcion = () =>{  
+const responsiveHeight = () =>{  
 if (clientWidth !== clientHeight) {
     medidaMemeBox.style.height = clientWidth + "px"
     }
 }
 
-funcion()
+responsiveHeight()
 
 window.onresize = resize;
 
@@ -382,12 +377,6 @@ const restore = () => {
 filterButton.onclick = restore
 
 //----------------------CONTORNO-------------------------//
-
-
-const buttonNoOutline = document.querySelector('#button-no-outline');
-const buttonLightOutline = document.querySelector('#button-light-outline');
-const buttonDarkOutline = document.querySelector('#button-dark-outline');
-
 const noOutline = () => {
     topTextInMemebox.style.textShadow = ("none")
     bottomTextInMemebox.style.textShadow = ("none")   
