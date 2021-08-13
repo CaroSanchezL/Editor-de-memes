@@ -262,13 +262,11 @@ imgClosePanel.onclick = imgPanelOculto
 
 const medidaMemeBox = document.querySelector(".meme-box")
 const clientWidth = medidaMemeBox.clientWidth
-
-
 const clientHeight = medidaMemeBox.clientHeight
 
 
 const funcion = () =>{  
-if (clientWidth != clientHeight) {
+if (clientWidth !== clientHeight) {
     medidaMemeBox.style.height = clientWidth + "px"
     }
 }

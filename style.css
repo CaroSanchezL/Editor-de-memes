@@ -473,6 +473,12 @@ body.light-mode input[type="color"]:hover {
     .button-x{
         left: 95%;
     }
+    main{
+        height: 85vh;
+    }
+    body{
+        overflow: hidden;
+    }
 
 }
 
@@ -505,12 +511,6 @@ body.light-mode input[type="color"]:hover {
     .outline-buttons{
         justify-content: space-evenly;
     }
-    
-
-    body{
-        overflow: hidden;
-    }
-
 }  
 
 
