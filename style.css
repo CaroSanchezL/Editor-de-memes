@@ -437,8 +437,6 @@ body.light-mode input[type="color"]:hover {
 
 /* ----------------------------Responsive------------------------- */
 
-/* ----------------Responsive PANEL IMAGEN/TEXTO------------ */
-
 @media(max-width: 1100px){
 
     aside {
@@ -448,13 +446,17 @@ body.light-mode input[type="color"]:hover {
         display: block;   
     }
     .meme-box-text{
-        padding-top: 2%;
+        padding: 5% 0;
     }
+
 }
  
 @media(max-width: 700px){
     header{
         height: 15vh;
+    }
+    main{
+        height: 95vh;
     }
     h1{
         font-size: 1.5em;
@@ -471,8 +473,14 @@ body.light-mode input[type="color"]:hover {
     .button-x{
         left: 95%;
     }
-}
+    main{
+        height: 85vh;
+    }
+    body{
+        overflow: hidden;
+    }
 
+}
 
 @media(max-width: 400px){
     header {
@@ -503,7 +511,6 @@ body.light-mode input[type="color"]:hover {
     .outline-buttons{
         justify-content: space-evenly;
     }
-    
 }  
 
 
