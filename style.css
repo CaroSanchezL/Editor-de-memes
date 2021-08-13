@@ -408,7 +408,7 @@ body.light-mode header button {
     color: #494949
 }
 
-body.light-mode input, body.light-mode select, body.light-mode textarea, body.light-mode .panel button, body.light-mode .input-color, body.light-mode .input-color span {
+body.light-mode input, body.light-mode select, body.light-mode textarea, body.light-mode .panel button, body.light-mode .input-color, body.light-mode .input-color span, body.light-mode .button-x {
     background-color: #e0e0e0;
     color: #494949
 }
@@ -432,8 +432,6 @@ body.light-mode input[type="range"]:focus {
 body.light-mode input[type="color"]:hover {
     background-color: #e0e0e0
 }
-
-
 
 /* ----------------------------Responsive------------------------- */
 
