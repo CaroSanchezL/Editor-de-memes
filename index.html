@@ -13,27 +13,27 @@
     <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
         <h1>GENERADOR DE MEMES</h1>
         <div class="buttons-container-header">
-            <button class="button-header" id="img-button"><i class="fas fa-file-image"></i></i>Imagen</button>
-            <button class="button-header" id="text-button"><i class="fas fa-font"></i>Texto</button>
-            <button class="button-header dark-mode-header" id="light-mode-button"><i class="fas fa-lightbulb"></i>Modo claro</button>
-            <button class="button-header disappear" id="dark-mode-button"><i class="fas fa-lightbulb"></i>Modo oscuro</button>
+            <button class="button-header" id="img-button"><i class="fas fa-file-image" aria-hidden="true"></i></i>Imagen</button>
+            <button class="button-header" id="text-button"><i class="fas fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="button-header dark-mode-header" id="light-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo claro</button>
+            <button class="button-header disappear" id="dark-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo oscuro</button>
         </div>
     </header>
     <!------------------------------------------- AREA DE TRABAJO ------------------------------------------------->
     <main>
         <div class="meme-editor-container">
             
-                <div class="meme-box" id= "meme-box">
-                    <p  class="meme-box-text" id="top-text-in-memebox">TOP TEXT</p>
-                    <div src="" class="meme-img" id="meme-img"></div>
-                    <p class="meme-box-text" id= "bottom-text-in-memebox">BOTTOM TEXT</p>
+                <div class="meme-box" id= "meme-box" aria-label="area de trabajo para edición de memes">
+                    <p  class="meme-box-text" id="top-text-in-memebox" aria-label="texto superior">TOP TEXT</p>
+                    <div src="" class="meme-img" id="meme-img" aria-label="imagen del meme"></div>
+                    <p class="meme-box-text" id= "bottom-text-in-memebox" aria-label="texto inferior">BOTTOM TEXT</p>
                 </div>
-                <button class="download-button"><i class="fas fa-download"></i>Descargá tu meme</button>
+                <button class="download-button"><i class="fas fa-download" aria-hidden="true"></i>Descargá tu meme</button>
         </div>
     </main>
     <!----------------------------------------- TOGGLE ENTRE MENÚES ----------------------------------------------->
     <aside class='side-panel' id="aside-panel">
-        <button class="img-panel-close button-x" id="panel-close">
+        <button class="img-panel-close button-x" id="panel-close" role="button" aria-label="cerrar">
             <i class="fas fa-times"></i>
         </button>
         
@@ -41,13 +41,13 @@
 
     <div class="edit-box">
 
-            <section class="img-panel panel">
+            <section class="img-panel panel" aria-label="panel de edición de imagen">
                 
                 <h2 id="img-title">IMAGEN</h2>
 
                 <div class="option-panel">
                     <h3 id="url-title">URL</h3>
-                    <input type="url" id="url-input">
+                    <input type="url" id="url-input" aria-label="input para URL">
                 </div>
                 <div class="option-panel">
     <!-------------------------------------------- OPCIONES FONDO ------------------------------------------------->
@@ -55,13 +55,13 @@
                     <div class="color-panel-text">
                         <div class="column">
                             <label for="color-background" class="input-color">
-                                <input type="color" id="color-background" name="color-background" value="#FFFFFF">
-                                <span id="input-background-image"></span>  
+                                <input type="color" id="color-background" name="color-background" value="#FFFFFF" aria-label="selección de color de fondo">
+                                <span id="input-background-image" aria-hidden="true"></span>  
                                 <!-- En este span va el texto que dice que color es -->
                             </label>
                         </div>
                         <div class="column">
-                            <select name="background-choices" id="select-background">
+                            <select name="background-choices" id="select-background" aria-label="selección de modo de fusión de fondo">
                                 <option value="none">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
@@ -108,21 +108,21 @@
                 </div>
             </section>
 
-            <section class = "panel">
+            <section class = "panel" id="text-panel" aria-label="panel de edición de texto">
                 <h2 id="text-title">TEXTO</h2>
                 <div class= "option-panel">
                     <h3 id="top-text-title">SUPERIOR</h3>
-                    <textarea id="top-text-input">TOP TEXT</textarea>
+                    <textarea id="top-text-input" aria-label="input para texto superior">TOP TEXT</textarea>
                     <label class="row" for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
                 </div>
                 <div class= "option-panel">
                     <h3 id="bottom-text-title">INFERIOR</h3>
-                    <textarea id="bottom-text-input">BOTTOM TEXT</textarea>
+                    <textarea id="bottom-text-input" aria-label="input para texto inferior">BOTTOM TEXT</textarea>
                     <label class="row" for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
                 </div>
                 <div class="option-panel">
                     <h3 id="font-title">FUENTE</h3>
-                    <select name="font-choices" id="select-font">
+                    <select name="font-choices" id="select-font" aria-label="selección de tipo de fuente">
                         <option value="Arial, Helvetica, sans-serif">Arial</option>
                         <option value="'Anton', sans-serif">Anton</option>
                         <option value="'Zen Tokyo Zoo', cursive">Zen Tokyo Zoo</option>
@@ -134,10 +134,10 @@
                         <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
                     </select>
                     <div class="row">
-                        <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100">
-                        <button class="text-align-button" id="text-align-left"><i class="fas fa-align-left"></i></button>
-                        <button class="text-align-button" id="text-align-center"><i class="fas fa-align-center"></i></button>
-                        <button class="text-align-button" id="text-align-right"><i class="fas fa-align-right"></i></button>
+                        <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100" aria-label="tamaño de fuente">
+                        <button class="text-align-button" id="text-align-left" aria-label="alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                        <button class="text-align-button" id="text-align-center" aria-label="centrar texto"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                        <button class="text-align-button" id="text-align-right" aria-label="alinear texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
                 <div class="option-panel">
@@ -145,35 +145,35 @@
                         <div class="column">
                             <h3 id="text-color-title">COLOR</h3>
                             <label class="input-color" for="font-color-input">
-                                <input type="color" name="font-color" id="font-color-input" value="#000000">
-                                <span id="input-font-color-text-span"></span> 
+                                <input type="color" name="font-color" id="font-color-input" value="#000000" aria-label="selección de color de texto">
+                                <span id="input-font-color-text-span" aria-hidden="true"></span> 
                             </label>
                         </div>
                         <div class="column">
                             <h3 id="text-background-title">FONDO</h3>
                             <label class="input-color">
-                                <input type="color" name="text-background" id="text-background-input" value="#ffffff">
-                                <span id="input-background-text"></span>  
+                                <input type="color" name="text-background" id="text-background-input" value="#ffffff" aria-label="selección de color de fondo de texto">
+                                <span id="input-background-text" aria-hidden="true"></span>  
                             </label>
                         </div>
                     </div>
-                    <label class ="row" for="transparent-background"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
+                    <label class ="row" for="transparent-background-checkbox"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
                 </div>
                 <div class="option-panel">
                     <h3 id="text-outline-title">CONTORNO</h3>
                     <div class="outline-buttons">
-                        <button class="contorno-button" id="button-no-outline">Ninguno</button>
-                        <button class="contorno-button" id="button-light-outline">Claro</button>
-                        <button class="contorno-button" id="button-dark-outline">Oscuro</button>
+                        <button class="contorno-button" id="button-no-outline" aria-label="opción de contorno de texto: ninguno">Ninguno</button>
+                        <button class="contorno-button" id="button-light-outline" aria-label="opción de contorno de texto: claro">Claro</button>
+                        <button class="contorno-button" id="button-dark-outline" aria-label="opción de contorno de texto: oscuro">Oscuro</button>
                     </div>
                 </div>
                 <div class="option-panel">
                     <h3 id="padding-title">ESPACIADO</h3>
-                    <input type="number" id="padding-input" value="25" min="10" max="50">
+                    <input type="number" id="padding-input" value="25" min="10" max="50" aria-label="input de valor de espaciado">
                 </div>
                 <div class="option-panel">
                     <h3 id="line-spacing-title">INTERLINEADO</h3>
-                    <select name="spaceline-input" id="spaceline-input">
+                    <select name="spaceline-input" id="spaceline-input" aria-label="selección de valor de interlineado">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
