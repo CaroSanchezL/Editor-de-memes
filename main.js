@@ -29,7 +29,7 @@ const invert = document.querySelector('#invert');
 
 // Variables títulos
 
-const ImgTitle = document.querySelector('#img-title');
+const imgTitle = document.querySelector('#img-title');
 const urlTitle = document.querySelector('#url-title');
 const filterTitle = document.querySelector('#filter-title');
 const backgroundImgTitle = document.querySelector('#background-img-title');
@@ -45,7 +45,7 @@ const colorInputFontTextSpan = document.getElementById("input-font-color-text-sp
 
 // VARIABLES PANEL TEXTO
 
-const textPanel = document.querySelector('.text-panel');
+const textPanel = document.querySelector('#text-panel');
 const buttonNoOutline = document.querySelector('#button-no-outline');
 const buttonLightOutline = document.querySelector('#button-light-outline');
 const buttonDarkOutline = document.querySelector('#button-dark-outline');
@@ -201,10 +201,14 @@ spaceLineInput.oninput = () => {
 
 textButton.onclick = () => {
     asidePanel.classList.add("menu-text");
+    // imgPanel.ariaHidden = "true";
+    // textPanel.ariaHidden = "false";
 }
 
 imgButton.onclick = () => {
     asidePanel.classList.remove("menu-text");
+    // imgPanel.ariaHidden = "false";
+    // textPanel.ariaHidden = "true";
 }
 
 //----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
