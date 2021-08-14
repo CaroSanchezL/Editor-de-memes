@@ -201,14 +201,10 @@ spaceLineInput.oninput = () => {
 
 textButton.onclick = () => {
     asidePanel.classList.add("menu-text");
-    // imgPanel.ariaHidden = "true";
-    // textPanel.ariaHidden = "false";
 }
 
 imgButton.onclick = () => {
     asidePanel.classList.remove("menu-text");
-    // imgPanel.ariaHidden = "false";
-    // textPanel.ariaHidden = "true";
 }
 
 //----------------------------------FUNCIONALIDAD INPUT URL/IMAGEN MEME---------------------------------------//
