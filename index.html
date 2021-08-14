@@ -12,11 +12,11 @@
     <header>
     <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
         <h1>GENERADOR DE MEMES</h1>
-        <div class="buttons-container-header">
-            <button class="button-header" id="img-button"><i class="fas fa-file-image" aria-hidden="true"></i></i>Imagen</button>
-            <button class="button-header" id="text-button"><i class="fas fa-font" aria-hidden="true"></i>Texto</button>
-            <button class="button-header dark-mode-header" id="light-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo claro</button>
-            <button class="button-header disappear" id="dark-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo oscuro</button>
+        <div class="change-button-container">
+            <button class="change-button" id="img-button"><i class="fas fa-file-image" aria-hidden="true"></i></i>Imagen</button>
+            <button class="change-button" id="text-button"><i class="fas fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="change-button dark-mode-header" id="light-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo claro</button>
+            <button class="change-button disappear" id="dark-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo oscuro</button>
         </div>
     </header>
 
@@ -33,7 +33,7 @@
         </div>
     </main>
 
-    <!-------------------------------------------- TOGGLE ENTRE PANELES -------------------------------------------->
+    <!-------------------------------------------- PANELES IMAGEN Y TEXTO ----------------------------------------->
     <aside class='side-panel' id="aside-panel">
         <button class="img-panel-close button-x" id="panel-close" role="button" aria-label="cerrar">
             <i class="fas fa-times"></i>
@@ -52,13 +52,13 @@
                 <div class="option-panel">
                     <h3 id="background-img-title">FONDO</h3>
                     <div class="color-panel-text">
-                        <div class="column">
+                        <div class="column-elements">
                             <label for="color-background" class="input-color">
                                 <input type="color" id="color-background" name="color-background" value="#FFFFFF" aria-label="selección de color de fondo">
                                 <span id="input-background-image" aria-hidden="true"></span>
                             </label>
                         </div>
-                        <div class="column">
+                        <div class="column-elements">
                             <select name="background-choices" id="select-background" aria-label="selección de modo de fusión de fondo">
                                 <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
@@ -111,14 +111,16 @@
                 <div class= "option-panel">
                     <h3 id="top-text-title">SUPERIOR</h3>
                     <textarea id="top-text-input" aria-label="input para texto superior">TOP TEXT</textarea>
-                    <label class="row" for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
+                    <label class="row-elements" for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
                 </div>
+
                 <!-------------------------------INPUTS TEXTO SUPERIOR E INFERIOR------------------------------->
                 <div class= "option-panel">
                     <h3 id="bottom-text-title">INFERIOR</h3>
                     <textarea id="bottom-text-input" aria-label="input para texto inferior">BOTTOM TEXT</textarea>
-                    <label class="row" for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
+                    <label class="row-elements" for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
                 </div>
+
                 <!-------------------------------OPCIONES TIPO Y TAMAÑO DE FUENTE--------------------------------->
                 <div class="option-panel">
                     <h3 id="font-title">FUENTE</h3>
@@ -133,7 +135,7 @@
                         <option value="'Special Elite', cursive">Special Elite</option>
                         <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
                     </select>
-                    <div class="row">
+                    <div class="row-elements">
                         <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100" aria-label="tamaño de fuente">
                         <button class="text-align-button" id="text-align-left" aria-label="alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
                         <button class="text-align-button" id="text-align-center" aria-label="centrar texto"><i class="fas fa-align-center" aria-hidden="true"></i></button>
@@ -144,14 +146,14 @@
                 <!---------------------------------OPCIONES COLOR DE TEXTO Y DE FONDO DE TEXTO------------------->
                 <div class="option-panel">
                     <div class="color-panel-text">
-                        <div class="column">
+                        <div class="column-elements">
                             <h3 id="text-color-title">COLOR</h3>
                             <label class="input-color" for="font-color-input">
                                 <input type="color" name="font-color" id="font-color-input" value="#000000" aria-label="selección de color de texto">
                                 <span id="input-font-color-text-span" aria-hidden="true"></span> 
                             </label>
                         </div>
-                        <div class="column">
+                        <div class="column-elements">
                             <h3 id="text-background-title">FONDO</h3>
                             <label class="input-color">
                                 <input type="color" name="text-background" id="text-background-input" value="#ffffff" aria-label="selección de color de fondo de texto">
@@ -159,7 +161,7 @@
                             </label>
                         </div>
                     </div>
-                    <label class ="row" for="transparent-background-checkbox"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
+                    <label class ="row-elements" for="transparent-background-checkbox"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
                 </div>
 
                 <!-----------------------------OPCIONES CONTORNO DE TEXTO----------------------------------------->
