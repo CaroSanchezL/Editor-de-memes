@@ -267,15 +267,15 @@ selectBackground.onchange = () => {
 
 const changeFilters = () => {
     imgMeme.style.filter =
-      `brightness(${brightness.value})` +
-      `opacity(${opacity.value})` +
-      `contrast(${contrast.value}%)` +
-      `blur(${inputBlur.value}px)` +
-      `grayscale(${grayscale.value}%)` +
-      `sepia(${sepia.value}%)` +
-      `hue-rotate(${hueRotate.value}deg)` +
-      `saturate(${saturate.value}%)` +
-      `invert(${invert.value})`;
+      `brightness(${brightness.value})
+      opacity(${opacity.value})
+      contrast(${contrast.value}%)
+      blur(${inputBlur.value}px)
+      grayscale(${grayscale.value}%)
+      sepia(${sepia.value}%)
+      hue-rotate(${hueRotate.value}deg)
+      saturate(${saturate.value}%)
+      invert(${invert.value})`;
   };
 
   brightness.onchange = changeFilters
