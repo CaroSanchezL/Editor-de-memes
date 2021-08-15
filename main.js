@@ -14,6 +14,7 @@ const imgMeme = document.getElementById('meme-img');
 const topTextInMemebox = document.getElementById("top-text-in-memebox");
 const memeBox = document.getElementById("meme-box");
 const bottomTextInMemebox = document.getElementById("bottom-text-in-memebox");
+const downloadButton = document.querySelector('.download-button');
 
 // VARIABLES ASIDE
 
@@ -97,6 +98,15 @@ textButton.onclick = () => {
 
 imgButton.onclick = () => {
     asidePanel.classList.remove("menu-text");
+}
+
+//-------------------------------------FUNCIONALIDAD BOTON DE DESCARGA------------------------------------------//
+
+downloadButton.onclick = () => {
+	domtoimage.toBlob(memeBox)
+    .then(function (blob) {
+        window.saveAs(blob, 'my-meme.png');
+    });
 }
 
 
