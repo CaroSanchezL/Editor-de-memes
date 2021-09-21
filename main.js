@@ -145,6 +145,31 @@ fontSizeInput.oninput = () => {
 
 // FUNCIONALIDAD ALINEAR TEXTO
 
+// Podrian aprovechar para hacer una funcion reutilizable aqui:
+// const setTextAlignment = (alignment) => {
+//     topTextInMemebox.style.textAlign = alignment
+//     bottomTextInMemebox.style.textAlign = alignment
+// }
+// Y despues llamar a la funcion en el onclick: 
+// textAlignCenter.onclick = () => {
+//     setTextAlignment("center")
+// }
+// textAlignRight.onclick = () => {
+//     setTextAlignment("right")
+// }
+// textAlignLeft.onclick = () => {
+//     setTextAlignment("left")
+// }
+
+textAlignCenter.onclick = () => {
+    topTextInMemebox.style.textAlign = "center";
+    bottomTextInMemebox.style.textAlign = "center";
+}
+textAlignRight.onclick = () => {
+    topTextInMemebox.style.textAlign = "right";
+    bottomTextInMemebox.style.textAlign = "right";
+}
+
 textAlignLeft.onclick = () => {
     topTextInMemebox.style.textAlign = "left";
     bottomTextInMemebox.style.textAlign = "left";
@@ -163,6 +188,7 @@ textAlignRight.onclick = () => {
 
 colorInputFontTextSpan.textContent = textColorInput.value.toUpperCase();
 
+// Excelente esta funcion
 textColorInput.oninput = () => {
     topTextInMemebox.style.color = textColorInput.value;
     bottomTextInMemebox.style.color = textColorInput.value;
@@ -174,6 +200,7 @@ textColorInput.oninput = () => {
 inputBackgroundTextSpan.textContent = textBackgroundInput.value.toUpperCase();
 
 textBackgroundInput.oninput = () => {
+    // impecable esta funcion!
     if (textBackgroundTransparent.checked) {
         topTextInMemebox.style.backgroundColor = "transparent";
         bottomTextInMemebox.style.backgroundColor = "transparent";
@@ -203,7 +230,7 @@ textBackgroundTransparent.onclick = () => {
 }
 
 // FUNCIONALIDAD CONTORNO
-
+// No son necesarios los parentesis en ningunas de estas funciones
 const noOutline = () => {
     topTextInMemebox.style.textShadow = ("none")
     bottomTextInMemebox.style.textShadow = ("none")   
@@ -325,10 +352,11 @@ const responsiveHeight = () =>{
     responsiveHeight()
     
     window.onresize = resize;
-    
+    // No usen la sintaxis de funciones vieja, usen funciones flecha
     function resize()
     {
         const clientWidth = medidaMemeBox.clientWidth
+        // No es necesaria esta variable
         const clientHeight = medidaMemeBox.clientHeight
         medidaMemeBox.style.height = clientWidth + "px"
           

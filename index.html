@@ -29,15 +29,19 @@
             
                 <div class="meme-box" id= "meme-box" aria-label="area de trabajo para edición de memes">
                     <p  class="meme-box-text" id="top-text-in-memebox" aria-label="texto superior">TOP TEXT</p>
+                    <!-- Es un div, no debe tener un src -->
                     <div src="" class="meme-img" id="meme-img" aria-label="imagen del meme"></div>
                     <p class="meme-box-text" id= "bottom-text-in-memebox" aria-label="texto inferior">BOTTOM TEXT</p>
                 </div>
+                <!-- No es necesario ocultar el icono con aria-hidden, ya que el lector por defecto los ignora.  -->
                 <button class="download-button"><i class="fas fa-download" aria-hidden="true"></i>Descargá tu meme</button>
         </div>
     </main>
 
     <!-------------------------------------------- PANELES IMAGEN Y TEXTO ----------------------------------------->
+    <!-- Usen siempre comillas dobles en HTML -->
     <aside class='side-panel' id="aside-panel">
+        <!-- El "role-button" solo es necesario en forms.  -->
         <button class="img-panel-close button-x" id="panel-close" role="button" aria-label="cerrar">
             <i class="fas fa-times"></i>
         </button>
@@ -139,6 +143,7 @@
                         <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
                     </select>
                     <div class="row-elements">
+                        <!-- No es necesario agregar aria-hidden a los iconos -->
                         <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100" aria-label="tamaño de fuente">
                         <button class="text-align-button" id="text-align-left" aria-label="alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
                         <button class="text-align-button" id="text-align-center" aria-label="centrar texto"><i class="fas fa-align-center" aria-hidden="true"></i></button>
@@ -151,6 +156,7 @@
                     <div class="color-panel-text">
                         <div class="column-elements">
                             <h3 id="text-color-title">COLOR</h3>
+                            <!-- El for del label no es necesario si el label rodea al input -->
                             <label class="input-color" for="font-color-input">
                                 <input type="color" name="font-color" id="font-color-input" value="#000000" aria-label="selección de color de texto">
                                 <span id="input-font-color-text-span" aria-hidden="true"></span> 

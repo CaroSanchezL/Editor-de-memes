@@ -49,6 +49,7 @@ header {
     align-items: center;
     background-color: #191e2b;
     padding: 15px;
+    /* Innecesario */
     width: 100%;
     z-index: 0;
     text-align: center;
@@ -195,6 +196,7 @@ aside button {
 
 .row-elements {
     display: flex;
+    /* Innecesario */
     flex-direction: row;
     align-items: center;
     width: 100%;
@@ -279,6 +281,7 @@ textarea {
 .input-color {
     display: flex;
     height: 36px;
+    /* Innecesario */
     flex-direction: row;
     align-items: center;
     background-color: #393e49;
